@@ -13,7 +13,7 @@ import './index.less'
 
 
 const Layout = ({ children, data }) => (
-  <div>
+  <div className="index-root">
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -22,7 +22,9 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div>
+      {/*<SectionBanner/>*/}
+
+      <div>
       {children()}
     </div>
     <Footer/>

@@ -3,7 +3,14 @@ import './article.less'
 import Markdown from 'react-markdown'
 
 class ArticleItem extends React.Component{
+    componentWillMount () {
+        //format brief article content
+        let articleContent = this.props.articleData.node.content
+        this.props.articleData.node.content = articleContent.replace(/[#]/g, '').slice(0, 200)
+        console.log(this.props.articleData.node.content)
+    }
     render () {
+        //conditionally render article image and tags
         let articleImg = '',
             articleTag = '';
         if (this.props.articleData.node.img_url){
@@ -20,7 +27,7 @@ class ArticleItem extends React.Component{
                         {articleTag}
                         <div className="article-title">{this.props.articleData.node.title}</div>
                         <div className="article-content">
-                            <Markdown source={this.props.articleData.node.content} />
+                            {this.props.articleData.node.content}
                         </div>
                         <button className="article-btn">View More</button>
                     </div>

@@ -2,9 +2,11 @@ import React from 'react'
 import Link from 'gatsby-link'
 import BannerItem from '../components/BannerItem'
 import ArticleItem from '../components/ArticleItem'
+import SectionBanner from '../components/Index/SectionBanner'
 
 const IndexPage = ({data}) => (
   <div className="container">
+      <SectionBanner/>
       <div className="row">
           {data.allStrapiBanner.edges.map(document => (
               <BannerItem bannerData={document} key={document.node.id}/>
@@ -23,6 +25,7 @@ const IndexPage = ({data}) => (
         // </li>
       ))}
       </div>
+
   </div>
 )
 
