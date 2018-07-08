@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import {IntlProvider, FormattedMessage, addLocaleData} from 'react-intl'
+import {IntlProvider, addLocaleData} from 'react-intl'
 import enTrans from '../i18n/en.js'
 import zhTrans from '../i18n/zh.js'
 import zh from 'react-intl/locale-data/zh'
@@ -25,12 +25,19 @@ import './index.less'
 class Layout extends React.Component {
     constructor ({props, children, data}) {
         super(props)
+        this.changeLanguage = this.changeLanguage.bind(this)
         this.data = data
         this.children = children
+        this.state = {
+            language: (navigator.language || navigator.browserLanguage).slice(0, 2)
+        }
+    }
+    changeLanguage(lang) {
+        this.setState({language: lang})
     }
     render () {
         return (
-            <IntlProvider locale="en" messages={messages['en']}>
+            <IntlProvider locale={this.state.language} key={this.state.language} messages={messages[this.state.language]}>
                 <div className="index-root">
                     <Helmet
                         title={this.data.site.siteMetadata.title}
@@ -39,7 +46,7 @@ class Layout extends React.Component {
                             { name: 'keywords', content: 'sample, something' },
                         ]}
                     />
-                    <Header siteTitle={this.data.site.siteMetadata.title} />
+                    <Header siteTitle={this.data.site.siteMetadata.title} onLanguageChange={this.changeLanguage} currentLanguage={this.state.language} />
                     <div>
                         {this.children()}
                     </div>

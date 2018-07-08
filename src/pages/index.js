@@ -4,30 +4,38 @@ import BannerItem from '../components/BannerItem'
 import ArticleItem from '../components/ArticleItem'
 import SectionBanner from '../components/Index/SectionBanner'
 
-const IndexPage = ({data}) => (
-  <div className="container index-page" style={{paddingBottom: '54px'}}>
-      <SectionBanner/>
-      <div className="row">
-          {data.allStrapiBanner.edges.map(document => (
-              <BannerItem bannerData={document} key={document.node.id}/>
-          ))}
-      </div>
-      <div className="row">
-      {data.allStrapiArticle.edges.map(document => (
-          <ArticleItem articleData={document} key={document.node.id}/>
-        //   <li key={document.node.id}>
-        //   <h2>
-        //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
-        //   </h2>
-        //   <p>
-        //     {document.node.content}
-        //   </p>
-        // </li>
-      ))}
-      </div>
+class IndexPage extends React.Component {
+    constructor({props, data}) {
+        super(props)
+        this.data = data
+    }
+    render() {
+        return (
+            <div className="container index-page" style={{paddingBottom: '54px'}}>
+                <SectionBanner/>
+                <div className="row">
+                    {this.data.allStrapiBanner.edges.map(document => (
+                        <BannerItem bannerData={document} key={document.node.id}/>
+                    ))}
+                </div>
+                <div className="row">
+                    {this.data.allStrapiArticle.edges.map(document => (
+                        <ArticleItem articleData={document} key={document.node.id}/>
+                        //   <li key={document.node.id}>
+                        //   <h2>
+                        //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
+                        //   </h2>
+                        //   <p>
+                        //     {document.node.content}
+                        //   </p>
+                        // </li>
+                    ))}
+                </div>
 
-  </div>
-)
+            </div>
+        )
+    }
+}
 
 export default IndexPage
 

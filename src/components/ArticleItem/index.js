@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.less'
+import {FormattedMessage} from 'react-intl'
 
 class ArticleItem extends React.Component{
     componentWillMount () {
@@ -28,7 +29,7 @@ class ArticleItem extends React.Component{
                             {this.props.articleData.node.content}
                         </div>
                         <a href={`/${this.props.articleData.node.id}`}>
-                            <button className="article-btn">View More</button>
+                            <button className="article-btn"><FormattedMessage id="viewMore"/></button>
                         </a>
                     </div>
                     <div className="article-shadow"> </div>

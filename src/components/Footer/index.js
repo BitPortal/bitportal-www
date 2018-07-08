@@ -1,6 +1,7 @@
 import React from 'react'
 import ShareGroup from '../ShareGroup'
 import './style.less'
+import {FormattedMessage} from 'react-intl'
 
 class Footer extends React.Component {
     render() {
@@ -10,16 +11,16 @@ class Footer extends React.Component {
                     <div className="row">
                         <div className="col-md-2 col-xs-6">
                             <ul className="footer-link-wrap">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#"><FormattedMessage id="nav.home"/></a></li>
                             </ul>
                         </div>
                         <div className="col-md-2 col-xs-6">
                             <ul className="footer-link-wrap">
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="#"><FormattedMessage id="nav.blog"/></a></li>
                             </ul>
                         </div>
-                        <div className="col-md-3 col-xs-12 footer-location">
-                            <span>Shanghai Pudong District</span>
+                        <div className="footer-location">
+                            <span><FormattedMessage id="address"/></span>
                             <span className="icon icon-locate"></span>
                         </div>
                     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import SectionBanner from '../components/Index/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
 import Markdown from 'react-markdown'
+import {FormattedMessage} from 'react-intl'
 
 import './article.less'
 
@@ -19,7 +20,7 @@ class ArticlePage extends React.Component {
                 <SectionBanner/>
                 <div className="container">
                     <div className="bread-crumb">
-                        Home - Blog - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
+                        <FormattedMessage id="nav.home"/> - <FormattedMessage id="nav.blog"/> - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                     </div>
                     <div className="article-page-wrap">
                         <div className="row">
