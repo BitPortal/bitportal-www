@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import './header.less'
+import './style.less'
 import classNames from 'classNames'
 
 import Logo from '../../../static/static/logo.png'

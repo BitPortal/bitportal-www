@@ -1,5 +1,5 @@
 import React from 'react'
-import './article.less'
+import './style.less'
 
 class ArticleItem extends React.Component{
     componentWillMount () {

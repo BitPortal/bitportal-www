@@ -19,7 +19,7 @@ class ArticlePage extends React.Component {
                 <SectionBanner/>
                 <div className="container">
                     <div className="bread-crumb">
-                        Home - Blog - {this.data.strapiArticle.title}
+                        Home - Blog - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                     </div>
                     <div className="article-page-wrap">
                         <div className="row">
@@ -31,17 +31,18 @@ class ArticlePage extends React.Component {
                                     {this.data.strapiArticle.author.username}
                                 </div>
                                 <div className="article-updated-at">
-                                    {articleUpdatedAt}
+                                    <span className="icon icon-time"></span> {articleUpdatedAt}
                                 </div>
                             </div>
                             <div className="col-sm-10">
                                 <div className="article-tag">{this.data.strapiArticle.tag}</div>
                                 <h1 className="article-title">{this.data.strapiArticle.title}</h1>
-                                <div className="article-divider"> </div>
+                                <div className="article-title-divider"> </div>
                                 <p className="article-content"><Markdown source={this.data.strapiArticle.content}/></p>
                                 <ShareGroup theme={'gradient'}/>
                             </div>
                         </div>
+                        <div className="article-divider"></div>
                         {/*<p>By <Link to={`/authors/${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>*/}
                     </div>
                 </div>

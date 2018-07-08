@@ -1,6 +1,6 @@
 import React from 'react'
 import ShareGroup from '../ShareGroup'
-import './footer.less'
+import './style.less'
 
 class Footer extends React.Component {
     render() {

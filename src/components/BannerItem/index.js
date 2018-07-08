@@ -1,5 +1,5 @@
 import React from 'react'
-import './banner.less'
+import './style.less'
 
 class BannerItem extends React.Component {
     render () {

@@ -14,8 +14,8 @@ let messages = {
 }
 
 import 'bootstrap/dist/css/bootstrap.css'
-import './icons.less'
-import './ui.less'
+import '../styles/icons.less'
+import '../styles/ui.less'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
