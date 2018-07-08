@@ -5,7 +5,7 @@ import ArticleItem from '../components/ArticleItem'
 import SectionBanner from '../components/Index/SectionBanner'
 
 const IndexPage = ({data}) => (
-  <div className="container">
+  <div className="container index-page" style={{paddingBottom: '54px'}}>
       <SectionBanner/>
       <div className="row">
           {data.allStrapiBanner.edges.map(document => (

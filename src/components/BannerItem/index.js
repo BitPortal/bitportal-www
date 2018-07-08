@@ -6,7 +6,9 @@ class BannerItem extends React.Component {
         return (
             <div className="col-sm-6">
                 <div className="banner-item">
-                    <img className="banner-img" src={this.props.bannerData.node.img_url}/>
+                    <a href={this.props.bannerData.node.jump_url}>
+                        <img className="banner-img" src={this.props.bannerData.node.img_url}/>
+                    </a>
                 </div>
             </div>
         )
