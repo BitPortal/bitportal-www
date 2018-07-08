@@ -8,8 +8,9 @@ module.exports = {
       options: {
         apiURL: 'http://35.194.142.236:1337',
         contentTypes: [
-          'article',
-          'user'
+            'article',
+            'banner',
+            'user'
         ]
       }
     }

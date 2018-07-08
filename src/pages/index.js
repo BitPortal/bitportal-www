@@ -1,12 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import BannerItem from '../components/BannerItem'
 import ArticleItem from '../components/ArticleItem'
 
 const IndexPage = ({data}) => (
-  <div>
-      <ul>
+  <div className="container">
+      <div className="row">
+          {data.allStrapiBanner.edges.map(document => (
+              <BannerItem bannerData={document} key={document.node.id}/>
+          ))}
+      </div>
+      <div className="row">
       {data.allStrapiArticle.edges.map(document => (
-          <ArticleItem articleData={document}/>
+          <ArticleItem articleData={document} key={document.node.id}/>
         //   <li key={document.node.id}>
         //   <h2>
         //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
@@ -16,7 +22,7 @@ const IndexPage = ({data}) => (
         //   </p>
         // </li>
       ))}
-    </ul>
+      </div>
   </div>
 )
 
@@ -30,6 +36,23 @@ export const pageQuery = graphql`
           id
           title
           content
+          language
+          img_url
+          jump_url
+          type
+          status
+          tag
+        }
+      }
+    }
+    allStrapiBanner {
+      edges {
+        node {
+          id
+          title
+          img_url
+          jump_url
+          display_priority
         }
       }
     }

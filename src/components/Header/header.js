@@ -24,10 +24,10 @@ class Header extends React.Component {
                     <img className='logo' src={Logo}/>
                     <a className="language-switch" onClick={this.toggleLanguageMenu}>
                         <span>{this.currentLanguage}</span>
-                        <ul className='language-menu' v-show="showLanguageMenu" onClick={this.stopPropagation}>
-                            <li v-show="currentLocale == 'zh'" onClick={this.switchLanguage.bind(this, 'en')}><a
+                        <ul className='language-menu' data-show="showLanguageMenu" onClick={this.stopPropagation}>
+                            <li data-show="currentLocale == 'zh'" onClick={this.switchLanguage.bind(this, 'en')}><a
                                 href="#">English</a></li>
-                            <li v-show="currentLocale == 'en'" onClick={this.switchLanguage.bind(this, 'zh')}><a
+                            <li data-show="currentLocale == 'en'" onClick={this.switchLanguage.bind(this, 'zh')}><a
                                 href="#">简体中文</a></li>
                         </ul>
                     </a>
