@@ -2,9 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header/header'
 import 'bootstrap/dist/css/bootstrap.css'
+import './icons.less'
+import './ui.less'
+
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+
 import './index.less'
+
 
 const Layout = ({ children, data }) => (
   <div>
@@ -19,6 +25,7 @@ const Layout = ({ children, data }) => (
     <div>
       {children()}
     </div>
+    <Footer/>
   </div>
 )
 

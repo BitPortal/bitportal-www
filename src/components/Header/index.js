@@ -2,8 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import './header.less'
 
-import Logo from '../../../static/logo.png'
-
 class Header extends React.Component {
     constructor(props) {
         super(props)
@@ -21,7 +19,7 @@ class Header extends React.Component {
         return (
             <div className='container'>
                 <header>
-                    <img className='logo' src={Logo}/>
+                    <img className='logo' src='/static/logo.png'/>
                     <a className="language-switch" onClick={this.toggleLanguageMenu}>
                         <span>{this.currentLanguage}</span>
                         <ul className='language-menu' data-show="showLanguageMenu" onClick={this.stopPropagation}>
