@@ -7,7 +7,6 @@ class ArticleItem extends React.Component{
         //format brief article content
         let articleContent = this.props.articleData.node.content
         this.props.articleData.node.content = articleContent.replace(/[#]/g, '').slice(0, 200)
-        console.log(this.props.articleData.node.content)
     }
     render () {
         //conditionally render article image and tags
