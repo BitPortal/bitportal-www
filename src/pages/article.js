@@ -40,7 +40,9 @@ class ArticlePage extends React.Component {
                                 <div className="article-tag">{this.data.strapiArticle.tag}</div>
                                 <h1 className="article-title">{this.data.strapiArticle.title}</h1>
                                 <div className="article-title-divider"> </div>
-                                <p className="article-content"><Markdown source={this.data.strapiArticle.content}/></p>
+                                <div className="article-content">
+                                    <Markdown source={this.data.strapiArticle.content}/>
+                                </div>
                                 <ShareGroup theme={'gradient'}/>
                             </div>
                         </div>
