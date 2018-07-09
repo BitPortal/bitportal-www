@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionBanner from '../components/Index/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
-import ArticleComment from '../components/ArticleComment'
 import Markdown from 'react-markdown'
 import {FormattedMessage} from 'react-intl'
 
@@ -21,7 +20,7 @@ class ArticlePage extends React.Component {
                 <SectionBanner/>
                 <div className="container">
                     <div className="bread-crumb">
-                        <FormattedMessage id="nav.home"/> - <FormattedMessage id="nav.blog"/> - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
+                        <a href="http://www.corp.bitportal.io"><FormattedMessage id="nav.home"/></a> - <a href="http://35.194.142.236:8000/5b2a5fc57c74855560155ac8/"><FormattedMessage id="nav.blog"/></a> - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                     </div>
                     <div className="article-page-wrap">
                         <div className="row">
@@ -47,11 +46,12 @@ class ArticlePage extends React.Component {
                             </div>
                         </div>
                         <div className="article-divider"> </div>
-                        <div className="row">
-                            <div className="col-sm-10 col-sm-offset-2">
-                                <ArticleComment/>
-                            </div>
-                        </div>
+                        /* Hide ArticleComment Temporarily */
+                        {/*<div className="row">*/}
+                            {/*<div className="col-sm-10 col-sm-offset-2">*/}
+                                {/*<ArticleComment/>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
                         {/*<p>By <Link to={`/authors/${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>*/}
                     </div>
                 </div>
