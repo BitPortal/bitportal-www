@@ -14,10 +14,12 @@ class ArticleComment extends React.Component{
                     </div>
                     <div className="article-comment-item">
                         <div className="row">
-                            <div className="col-sm-2">
-                                <div className="comment-user-avatar"></div>
+                            <div className="col-sm-2 comment-user-avatar-wrap">
+                                <div className="comment-user-avatar">
+                                    <img src=""/>
+                                </div>
                             </div>
-                            <div className="col-sm-10">
+                            <div className="col-sm-10 comment-user-info-wrap">
                                 <div className="comment-user-info">
                                     <span className="comment-username">Meon</span>, <span className="comment-time">October 3, 2018</span>
                                 </div>
