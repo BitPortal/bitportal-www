@@ -28,8 +28,12 @@ class Layout extends React.Component {
         this.changeLanguage = this.changeLanguage.bind(this)
         this.data = data
         this.children = children
+        let navigatorLanguage
+        if(typeof window !== 'undefined'){
+            navigatorLanguage = (navigator.language || navigator.browserLanguage).slice(0, 2)
+        }
         this.state = {
-            language: (navigator.language || navigator.browserLanguage).slice(0, 2)
+            language: navigatorLanguage
         }
     }
     changeLanguage(lang) {
