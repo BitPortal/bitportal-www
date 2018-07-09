@@ -16,11 +16,11 @@ class ArticlePage extends React.Component {
         let articleUpdatedAt = updatedAt.toDateString()
 
         return (
-            <div className="article-page" style={{paddingBottom: '54px'}}>
+            <div className="article-page">
                 <SectionBanner/>
                 <div className="container">
                     <div className="bread-crumb">
-                        <a href="http://www.corp.bitportal.io" className="bread-crumb-link"><FormattedMessage id="nav.home"/></a> - <a href="http://35.194.142.236:8000/5b2a5fc57c74855560155ac8/" className="bread-crumb-link"><FormattedMessage id="nav.blog"/></a> - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
+                        <a href="http://www.corp.bitportal.io" className="bread-crumb-link"><FormattedMessage id="nav.home"/></a> - <a href="http://35.194.142.236:8000" className="bread-crumb-link"><FormattedMessage id="nav.blog"/></a> - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                     </div>
                     <div className="article-page-wrap">
                         <div className="row">
