@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionBanner from '../components/Index/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
+import ArticleComment from '../components/ArticleComment'
 import Markdown from 'react-markdown'
 import {FormattedMessage} from 'react-intl'
 
@@ -32,7 +33,7 @@ class ArticlePage extends React.Component {
                                     {this.data.strapiArticle.author.username}
                                 </div>
                                 <div className="article-updated-at">
-                                    <span className="icon icon-time"></span> {articleUpdatedAt}
+                                    <span className="icon icon-time"> </span> {articleUpdatedAt}
                                 </div>
                             </div>
                             <div className="col-sm-10">
@@ -43,7 +44,12 @@ class ArticlePage extends React.Component {
                                 <ShareGroup theme={'gradient'}/>
                             </div>
                         </div>
-                        <div className="article-divider"></div>
+                        <div className="article-divider"> </div>
+                        <div className="row">
+                            <div className="col-sm-10 col-sm-offset-2">
+                                <ArticleComment/>
+                            </div>
+                        </div>
                         {/*<p>By <Link to={`/authors/${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>*/}
                     </div>
                 </div>

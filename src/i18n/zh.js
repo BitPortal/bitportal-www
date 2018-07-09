@@ -4,5 +4,7 @@ export default {
     'banner.title1': '币通',
     'banner.title2': '去往数字资产世界的传送门',
     'viewMore': '查看更多',
-    'address': '上海浦东新区'
+    'address': '上海浦东新区',
+    'comments': '评论',
+    'comment.postHint': '留下你的评论'
 }
