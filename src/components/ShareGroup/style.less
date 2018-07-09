@@ -1,7 +1,7 @@
 @import '../../styles/mixins.less';
 
 .social-link{
-  margin: 16px auto;
+  margin: 0 auto 16px auto;
 }
 
 .social-link.social-link-dark {
@@ -14,7 +14,7 @@
   .social-link-item{
     .blue-white-gradient();
   }
-  div{
+  &>div{
     float: left;
   }
 }
@@ -28,10 +28,11 @@
   color: #fff;
   white-space: nowrap;
   border-radius: 5px;
-  margin-right: 10px;
   padding: 0 18px;
   line-height: 45px;
-  width: 120px;
+  width: 100%;
+  margin: 8px auto;
+  text-align: center;
 }
 
 .social-link-text {
@@ -57,22 +58,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .social-link {
-    padding: 0 15px;
-  }
-
   .social-link > div {
     float: none;
     display: inline-block;
-  }
-
-  .social-link-item {
-    margin: 8px 8px 8px auto;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .social-link > div {
-    float: left;
   }
 }
