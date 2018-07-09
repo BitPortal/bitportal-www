@@ -1,9 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import './style.less'
-import classNames from 'classNames'
-
-import Logo from '../../../static/static/logo.png'
 
 class Header extends React.Component {
     constructor(props) {
