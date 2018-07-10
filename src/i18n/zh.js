@@ -19,28 +19,17 @@ export default {
     'features.item2Text': '由业内资深团队打造，为您提供专业可靠的资产管理工具',
     'features.item3Title': '便捷',
     'features.item3Text': '基于React Native开发，为您提供iOS和Android的客户端',
-    assetsManagement: {
-        title: '专业的EOS的资产管理',
-        text1: '币通支持基于EOS的账户、资产管理，及超级节点投票',
-        text2: '币通不会保存您的私钥，由您的资产由您掌控',
-        text3: '币通使用多层嵌套的安全措施，为您的资产保驾护航'
-    },
-    marketInformation: {
-        title: '实用的市场数据',
-        text1: '实时的交易数据，让您把握每次投资机遇',
-        text2: '全面的项目信息，未战敌而先知敌',
-        text3: '简约的成本计算，风险控制心细如丝'
-    },
-    subscribe: {
-        title: '订阅',
-        text1: '参与社区活动',
-        text2: '获取最新资讯',
-        emailHint: '请输入您的邮箱'
-    },
-    partners: {
-        title: '合作伙伴'
-    },
-    footer: {
-        district: '上海浦东新区'
-    }
+    'assetsManagement.title': '专业的EOS的资产管理',
+    'assetsManagement.text1': '币通支持基于EOS的账户、资产管理，及超级节点投票',
+    'assetsManagement.text2': '币通不会保存您的私钥，由您的资产由您掌控',
+    'assetsManagement.text3': '币通使用多层嵌套的安全措施，为您的资产保驾护航',
+    'marketInformation.title': '实用的市场数据',
+    'marketInformation.text1': '实时的交易数据，让您把握每次投资机遇',
+    'marketInformation.text2': '全面的项目信息，未战敌而先知敌',
+    'marketInformation.text3': '简约的成本计算，风险控制心细如丝',
+    'subscribe.title': '订阅',
+    'subscribe.text1': '参与社区活动',
+    'subscribe.text2': '获取最新资讯',
+    'subscribe.emailHint': '请输入您的邮箱',
+    'partners.title': '合作伙伴'
 }
