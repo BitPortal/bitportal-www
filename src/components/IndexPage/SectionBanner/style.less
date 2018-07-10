@@ -1,0 +1,68 @@
+.section-banner {
+  color: #fff;
+  &.hideDetail{
+    .page-banner-text-wrap, .page-banner-download-wrap{
+      display: none;
+    }
+    .page-banner-title {
+      margin-bottom: 115px;
+    }
+  }
+  .banner-icon {
+    width: 20px;
+    vertical-align: top;
+    margin-right: 11px;
+  }
+
+  .page-banner-title {
+    margin-top: 164px;
+    font-size: 48px;
+  }
+  .page-banner-text-wrap {
+    margin-top: 35px;
+    list-style: none;
+    padding-left: 0;
+  }
+  .page-banner-text {
+    margin-bottom: 15px;
+  }
+  .page-banner-content {
+    display: inline-block;
+    width: 85%;
+  }
+  .page-banner-download-wrap {
+    margin-top: 35px;
+  }
+  .page-banner-download-ios {
+    width: 135px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .ios-download {
+    width: 100%;
+  }
+  .page-banner-download-android {
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+  }
+  .android-download {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    background: none;
+    position: relative;
+    z-index: 10;
+    height: 536px;
+    margin-top: 0;
+    .page-banner-title {
+      margin-top: 152px;
+      font-size: 28px;
+    }
+
+    .page-banner-download-ios {
+      margin-right: 10px;
+    }
+  }
+}

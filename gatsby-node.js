@@ -34,7 +34,7 @@
      `).then(result => {
          result.data.allStrapiArticle.edges.forEach(({node}) => {
              createPage({
-                 path: `/${node.id}`,
+                 path: `/blog/${node.id}`,
                  component: path.resolve('src/pages/article.js'),
                  context: {
                      id: node.id

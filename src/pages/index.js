@@ -1,71 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import BannerItem from '../components/BannerItem'
-import ArticleItem from '../components/ArticleItem'
-import SectionBanner from '../components/Index/SectionBanner'
+import SectionBanner from '../components/IndexPage/SectionBanner'
 
-class IndexPage extends React.Component {
-    constructor({props, data}) {
-        super(props)
-        this.data = data
-    }
-    render() {
+class IndexPage extends React.Component{
+    render () {
         return (
-            <div className="container index-page" style={{paddingBottom: '54px'}}>
+            <div className="index-page">
                 <SectionBanner/>
-                <div className="row">
-                    {this.data.allStrapiBanner.edges.map(document => (
-                        <BannerItem bannerData={document} key={document.node.id}/>
-                    ))}
-                </div>
-                <div className="row">
-                    {this.data.allStrapiArticle.edges.map(document => (
-                        <ArticleItem articleData={document} key={document.node.id}/>
-                        //   <li key={document.node.id}>
-                        //   <h2>
-                        //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
-                        //   </h2>
-                        //   <p>
-                        //     {document.node.content}
-                        //   </p>
-                        // </li>
-                    ))}
-                </div>
-
             </div>
         )
     }
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allStrapiArticle {
-      edges {
-        node {
-          id
-          title
-          content
-          language
-          img_url
-          jump_url
-          type
-          status
-          tag
-        }
-      }
-    }
-    allStrapiBanner {
-      edges {
-        node {
-          id
-          title
-          img_url
-          jump_url
-          display_priority
-        }
-      }
-    }
-  }
-`

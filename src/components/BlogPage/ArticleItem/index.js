@@ -28,7 +28,7 @@ class ArticleItem extends React.Component{
                         <div className="article-content">
                             {this.props.articleData.node.content}
                         </div>
-                        <a href={`/${this.props.articleData.node.id}`}>
+                        <a href={`/blog/${this.props.articleData.node.id}`}>
                             <button className="article-btn"><FormattedMessage id="viewMore"/></button>
                         </a>
                     </div>

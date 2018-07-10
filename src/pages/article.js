@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionBanner from '../components/Index/SectionBanner'
+import SectionBanner from '../components/IndexPage/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
 import Markdown from 'react-markdown'
 import {FormattedMessage} from 'react-intl'
@@ -17,7 +17,7 @@ class ArticlePage extends React.Component {
 
         return (
             <div className="article-page">
-                <SectionBanner/>
+                <SectionBanner hideDetail={true}/>
                 <div className="container">
                     <div className="bread-crumb">
                         <a href="http://www.corp.bitportal.io" className="bread-crumb-link"><FormattedMessage id="nav.home"/></a> - <a href="http://35.194.142.236:8000" className="bread-crumb-link"><FormattedMessage id="nav.blog"/></a> - <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
