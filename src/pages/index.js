@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionBanner from '../components/IndexPage/SectionBanner'
 import SectionFeature from '../components/IndexPage/SectionFeature'
+import SectionSubscribe from '../components/IndexPage/SectionSubscribe'
 import './index.less';
 
 class IndexPage extends React.Component{
@@ -9,6 +10,7 @@ class IndexPage extends React.Component{
             <div className="index-page">
                 <SectionBanner/>
                 <SectionFeature/>
+                <SectionSubscribe/>
             </div>
         )
     }
