@@ -12,8 +12,9 @@ class Header extends React.Component {
         super(props)
         this.switchLanguage = this.switchLanguage.bind(this)
         this.toggleLanguageMenu = this.toggleLanguageMenu.bind(this)
+        this.toggleNavMenu = this.toggleNavMenu.bind(this)
         let initLanguage = ''
-        if (localStorage.getItem('language') !== ''){
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('language') !== ''){
             initLanguage = localStorage.getItem('language')
         }else if (typeof window !== 'undefined') {
             initLanguage = (navigator.language || navigator.browserLanguage).slice(0, 2)
@@ -48,6 +49,20 @@ class Header extends React.Component {
         }
     }
 
+    toggleNavMenu () {
+        let headerNav = document.getElementsByClassName('header-nav')[0]
+        console.log(1)
+        if (headerNav.style.display === 'none' || !headerNav.style.display ){
+            console.log(2)
+
+            headerNav.style.display = 'block'
+        }else {
+            console.log(3)
+
+            headerNav.style.display = 'none'
+        }
+    }
+
     render() {
         let languageItem = ''
         if (this.state.language === 'en') {
@@ -67,6 +82,7 @@ class Header extends React.Component {
                             <li><Link to="/blog"><FormattedMessage id="nav.blog"/></Link></li>
                         </ul>
                     </nav>
+                    <span className="glyphicon glyphicon-menu-hamburger header-nav-toggle" onClick={this.toggleNavMenu}> </span>
                     <div className="language-switch" onClick={this.toggleLanguageMenu}>
                         <span>{this.state.currentLanguage}</span>
                         <span className="glyphicon glyphicon-chevron-up language-glyphicon"> </span>

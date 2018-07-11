@@ -1,17 +1,18 @@
 import React from 'react'
 import './style.less'
 import {FormattedMessage} from 'react-intl'
-import Fade from 'react-reveal/Fade'
 
 class SectionBanner extends React.Component {
     constructor(props) {
         super(props)
     }
-    componentDidMount () {
+
+    componentDidMount() {
         if (this.props.hideDetail) {
             document.getElementsByClassName('section-banner')[0].className += ' hideDetail';
         }
     }
+
     render() {
 
         return (
@@ -20,11 +21,11 @@ class SectionBanner extends React.Component {
                     <div className='page-banner-title'>
                         <FormattedMessage id='banner.title1' defaultMessage={'title1'}/><br/>
                         <FormattedMessage
-                        id="banner.title2"/>
+                            id="banner.title2"/>
                     </div>
-                    <Fade bottom>
                     <ul className='page-banner-text-wrap'>
-                        <li className='page-banner-text'><img className='banner-icon' src='/static/icon/icon-clock.png'/>
+                        <li className='page-banner-text'><img className='banner-icon'
+                                                              src='/static/icon/icon-clock.png'/>
                             <div className="page-banner-content"><FormattedMessage id="banner.text1"/></div>
                         </li>
                         <li className='page-banner-text'>
@@ -48,7 +49,6 @@ class SectionBanner extends React.Component {
                             </a>
                         </div>
                     </div>
-                    </Fade>
                 </div>
             </section>
         )

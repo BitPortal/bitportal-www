@@ -2,19 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import {injectIntl} from 'react-intl'
-
-import MobileBlocks from '../IndexPage/MobileBlocks'
+import config from 'react-reveal/globals'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../styles/icons.less'
 import '../../styles/ui.less'
+import './style.less'
 
 import Header from '../Header'
 import Footer from '../Footer'
+import MobileBlocks from '../IndexPage/MobileBlocks'
 
 
-import './style.less'
-
+/* enable animation ssr */
+config({ssrFadeout: true})
 
 class Layout extends React.Component {
     constructor({props, children, data, intl}) {
