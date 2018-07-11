@@ -6,6 +6,7 @@ import enTrans from '../i18n/en.js'
 import zhTrans from '../i18n/zh.js'
 import zh from 'react-intl/locale-data/zh'
 import en from 'react-intl/locale-data/en'
+import MobileBlocks from '../components/IndexPage/MobileBlocks'
 addLocaleData([...en, ...zh])
 
 let messages = {
@@ -78,7 +79,7 @@ class Layout extends React.Component {
                         {this.children()}
                     </div>
                     <Footer/>
-
+                    <MobileBlocks/>
                 </div>
             </IntlProvider>
         )
