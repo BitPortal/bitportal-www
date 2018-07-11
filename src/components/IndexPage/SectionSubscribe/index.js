@@ -1,5 +1,7 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
+import SendCloud from '../../Email/SendCloud'
+import MailChimp from '../../Email/MailChimp'
 import './style.less'
 
 class SectionSubscribe extends React.Component {
@@ -14,6 +16,9 @@ class SectionSubscribe extends React.Component {
                             <FormattedMessage id="subscribe.text2"/>
                         </div>
                         <div className='subscribe-form'>
+                            <SendCloud/>
+                            <MailChimp/>
+
                             {/*<MailChimp v-if="locale == 'en'"></MailChimp>*/}
                             {/*<SendCloud v-if="locale == 'zh'"></SendCloud>*/}
                         </div>

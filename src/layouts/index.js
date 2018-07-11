@@ -45,6 +45,8 @@ class Layout extends React.Component {
                 <div className="index-root">
                     <Helmet>
                         <title>Bitportal - The Portal of the Internet of value</title>
+                        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+                        <link rel="shortcut icon" href="/static/favicon.ico"/>
                         <link rel="canonical" href="https://www.bitportal.io/" />
                         <meta name="baidu-site-verification" content="BYgg29bFbl" />
                         <meta name="google-site-verification" content="Wv3KiSQpcA3P3ti2Wi87x4wyDyWD2gfFrPsZEEZizXw" />
@@ -76,6 +78,7 @@ class Layout extends React.Component {
                         {this.children()}
                     </div>
                     <Footer/>
+
                 </div>
             </IntlProvider>
         )

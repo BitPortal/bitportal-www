@@ -1,0 +1,43 @@
+
+.block-1, .block-2, .block-3{
+  display: none;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .block-1, .block-2, .block-3{
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+  }
+  .block-1{
+    width: 827px;
+    height: 827px;
+    top: 0;
+    left: -410px;
+    border-radius: 100px;
+    background: -webkit-linear-gradient(top, #43454e, #202126);
+    background: -o-linear-gradient(bottom, #43454e, #202126);
+    background: -moz-linear-gradient(bottom, #43454e, #202126);
+    background: linear-gradient(to bottom, #43454e, #202126);
+  }
+  .block-2{
+    width: 634px;
+    height: 634px;
+    top: 1410px;
+    left: 280px;
+    border-radius: 100px;
+    background: #202126;
+  }
+  .block-3{
+    width: 774px;
+    height: 774px;
+    top: 2330px;
+    left: -460px;
+    border-radius: 100px;
+    background: #202126;
+  }
+}
