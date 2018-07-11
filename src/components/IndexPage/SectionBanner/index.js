@@ -18,7 +18,7 @@ class SectionBanner extends React.Component {
             <section className='section-wrap section-banner'>
                 <div className='container'>
                     <div className='page-banner-title'>
-                        <FormattedMessage id='banner.title1'/><br/>
+                        <FormattedMessage id='banner.title1' defaultMessage={'title1'}/><br/>
                         <FormattedMessage
                         id="banner.title2"/>
                     </div>

@@ -6,13 +6,6 @@ import enTrans from '../i18n/en.js'
 import zhTrans from '../i18n/zh.js'
 import zh from 'react-intl/locale-data/zh'
 import en from 'react-intl/locale-data/en'
-import MobileBlocks from '../components/IndexPage/MobileBlocks'
-addLocaleData([...en, ...zh])
-
-let messages = {
-    'en': enTrans,
-    'zh': zhTrans
-}
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/icons.less'
@@ -20,8 +13,17 @@ import '../styles/ui.less'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import MobileBlocks from '../components/IndexPage/MobileBlocks'
+
 
 import './index.less'
+
+addLocaleData([...en, ...zh])
+
+let messages = {
+    'en': enTrans,
+    'zh': zhTrans
+}
 
 class Layout extends React.Component {
     constructor ({props, children, data}) {
@@ -39,6 +41,7 @@ class Layout extends React.Component {
     }
     changeLanguage(lang) {
         this.setState({language: lang})
+        console.log(document.cookie)
     }
     render () {
         return (
