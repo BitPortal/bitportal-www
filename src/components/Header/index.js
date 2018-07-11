@@ -1,4 +1,5 @@
 import React from 'react'
+import {FormattedMessage} from 'react-intl'
 import './style.less'
 
 class Header extends React.Component {
@@ -40,6 +41,12 @@ class Header extends React.Component {
             <div className='container'>
                 <header>
                     <img className='logo' src='/static/logo.png'/>
+                    <nav className="header-nav">
+                        <ul className="header-nav-list">
+                            <li><a href="/"><FormattedMessage id="nav.home"/></a></li>
+                            <li><a href="/blog"><FormattedMessage id="nav.blog"/></a></li>
+                        </ul>
+                    </nav>
                     <div className="language-switch" onClick={this.toggleLanguageMenu}>
                         <span>{this.state.currentLanguage}</span>
                         <span className="glyphicon glyphicon-chevron-up language-glyphicon"> </span>
