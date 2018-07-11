@@ -10,16 +10,19 @@ class Header extends React.Component {
     }
     constructor(props) {
         super(props)
-        let navigatorLanguage = ''
-        if (typeof window !== 'undefined') {
-            navigatorLanguage = (navigator.language || navigator.browserLanguage).slice(0, 2)
-        }
-
         this.switchLanguage = this.switchLanguage.bind(this)
         this.toggleLanguageMenu = this.toggleLanguageMenu.bind(this)
+        let initLanguage = ''
+        if (localStorage.getItem('language') !== ''){
+            initLanguage = localStorage.getItem('language')
+        }else if (typeof window !== 'undefined') {
+            initLanguage = (navigator.language || navigator.browserLanguage).slice(0, 2)
+        }else {
+            initLanguage = 'en'
+        }
         this.state = {
-            language: navigatorLanguage,
-            currentLanguage: navigatorLanguage === 'en' ? 'English' : '简体中文'
+            language: initLanguage,
+            currentLanguage: initLanguage === 'en' ? 'English' : '简体中文'
         }
     }
 
@@ -29,6 +32,7 @@ class Header extends React.Component {
             language: lang,
             currentLanguage: lang === 'en' ? 'English' : '简体中文'
         })
+        localStorage.setItem('language', lang)
         window.location.href= `/${lang}${originalPath}`
     }
 
