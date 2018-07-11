@@ -58,9 +58,9 @@
     }
 
     function o() {
-        b.classList.remove(a.showClass[a.type]), b.classList.add(a.hiddenClass[a.type]), setTimeout(function () {
-            "load" == a.trigger || "scroll" == a.trigger ? b.remove() : null, b.style.display = "none"
-        }, 1e3), document.cookie = "sendcloud_subscribe=hidden;path=/;expires=" + new Date(Date.now() + parseInt(a.expires)).toUTCString()
+        // b.classList.remove(a.showClass[a.type]), b.classList.add(a.hiddenClass[a.type]), setTimeout(function () {
+        //     "load" == a.trigger || "scroll" == a.trigger ? b.remove() : null, b.style.display = "none"
+        // }, 1e3), document.cookie = "sendcloud_subscribe=hidden;path=/;expires=" + new Date(Date.now() + parseInt(a.expires)).toUTCString()
     }
 
     function r(s) {

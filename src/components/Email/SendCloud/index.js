@@ -1,9 +1,10 @@
 import React from 'react'
 import './style.less'
-import sendObj from  '../../../lib/sendCloud'
+const sendObj = require('../../../lib/sendCloud')
 
 class SendCloud extends React.Component{
     componentDidMount () {
+        console.log(sendObj)
         const option = {
             type: 'embed',
             expires: '86400000',

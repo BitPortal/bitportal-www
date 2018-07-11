@@ -6,6 +6,7 @@ import './style.less'
 
 class SectionSubscribe extends React.Component {
     render() {
+        let MailComponent = true ? <SendCloud/> : <MailChimp/>
         return (
             <section className='section-wrap section-subscribe-partners'>
                 <div className="container">
@@ -16,11 +17,7 @@ class SectionSubscribe extends React.Component {
                             <FormattedMessage id="subscribe.text2"/>
                         </div>
                         <div className='subscribe-form'>
-                            <SendCloud/>
-                            <MailChimp/>
-
-                            {/*<MailChimp v-if="locale == 'en'"></MailChimp>*/}
-                            {/*<SendCloud v-if="locale == 'zh'"></SendCloud>*/}
+                            {MailComponent}
                         </div>
                     </div>
                     <div className="section-partners">
