@@ -1,19 +1,35 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
+import {Link} from '../../i18n'
+import PropTypes from 'prop-types'
 import './style.less'
 
 class Header extends React.Component {
+    static contextTypes = {
+        language: PropTypes.object
+    }
     constructor(props) {
         super(props)
+        let navigatorLanguage = ''
+        if (typeof window !== 'undefined') {
+            navigatorLanguage = (navigator.language || navigator.browserLanguage).slice(0, 2)
+        }
+
         this.switchLanguage = this.switchLanguage.bind(this)
         this.toggleLanguageMenu = this.toggleLanguageMenu.bind(this)
         this.state = {
-            currentLanguage: this.props.currentLanguage === 'en' ? 'English' : '简体中文'
+            language: navigatorLanguage,
+            currentLanguage: navigatorLanguage === 'en' ? 'English' : '简体中文'
         }
     }
 
-    switchLanguage(lang) {
-        this.props.onLanguageChange(lang)
+    switchLanguage(lang, event) {
+        const originalPath = this.context.language.originalPath || '/'
+        this.setState({
+            language: lang,
+            currentLanguage: lang === 'en' ? 'English' : '简体中文'
+        })
+        window.location.href= `/${lang}${originalPath}`
     }
 
     toggleLanguageMenu() {
@@ -30,12 +46,12 @@ class Header extends React.Component {
 
     render() {
         let languageItem = ''
-        if (this.props.currentLanguage === 'en') {
-            languageItem = <li onClick={this.switchLanguage.bind(this, 'zh')}><a
-                href="#">简体中文</a></li>
+        if (this.state.language === 'en') {
+            languageItem = <li onClick={this.switchLanguage.bind(this, 'zh')}><Link
+                to="#">简体中文</Link></li>
         } else {
-            languageItem = <li onClick={this.switchLanguage.bind(this, 'en')}><a
-                href="#">English</a></li>
+            languageItem = <li onClick={this.switchLanguage.bind(this, 'en')}><Link
+                to="#">English</Link></li>
         }
         return (
             <div className='container'>
@@ -43,8 +59,8 @@ class Header extends React.Component {
                     <img className='logo' src='/static/logo.png'/>
                     <nav className="header-nav">
                         <ul className="header-nav-list">
-                            <li><a href="/"><FormattedMessage id="nav.home"/></a></li>
-                            <li><a href="/blog"><FormattedMessage id="nav.blog"/></a></li>
+                            <li><Link to="/"><FormattedMessage id="nav.home"/></Link></li>
+                            <li><Link to="/blog"><FormattedMessage id="nav.blog"/></Link></li>
                         </ul>
                     </nav>
                     <div className="language-switch" onClick={this.toggleLanguageMenu}>
@@ -61,3 +77,13 @@ class Header extends React.Component {
 }
 
 export default Header
+//
+// export const query = graphql`
+//   query SiteTitleQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `
