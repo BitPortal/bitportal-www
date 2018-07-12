@@ -15,7 +15,7 @@ class BlogPage extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="container blog-page" style={{paddingBottom: '54px'}}>
+                <div className="blog-page" style={{paddingBottom: '54px'}}>
                     <Fade bottom>
                         <SectionBanner hideDetail={true}/>
                     </Fade>

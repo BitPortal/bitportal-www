@@ -13,6 +13,7 @@ class Header extends React.Component {
         this.switchLanguage = this.switchLanguage.bind(this)
         this.toggleLanguageMenu = this.toggleLanguageMenu.bind(this)
         this.toggleNavMenu = this.toggleNavMenu.bind(this)
+        this.hideNavMenu = this.hideNavMenu.bind(this)
         let initLanguage = ''
         if (typeof localStorage !== 'undefined' && localStorage.getItem('language') !== ''){
             initLanguage = localStorage.getItem('language')
@@ -33,6 +34,7 @@ class Header extends React.Component {
             language: lang,
             currentLanguage: lang === 'en' ? 'English' : '简体中文'
         })
+        console.log(123)
         localStorage.setItem('language', lang)
         window.location.href= `/${lang}${originalPath}`
     }
@@ -51,16 +53,15 @@ class Header extends React.Component {
 
     toggleNavMenu () {
         let headerNav = document.getElementsByClassName('header-nav')[0]
-        console.log(1)
         if (headerNav.style.display === 'none' || !headerNav.style.display ){
-            console.log(2)
-
             headerNav.style.display = 'block'
         }else {
-            console.log(3)
-
             headerNav.style.display = 'none'
         }
+    }
+
+    hideNavMenu () {
+        document.getElementsByClassName('header-nav')[0].style.display = 'none'
     }
 
     render() {
@@ -76,7 +77,7 @@ class Header extends React.Component {
             <div className='container'>
                 <header>
                     <img className='logo' src='/static/logo.png'/>
-                    <nav className="header-nav">
+                    <nav className="header-nav" onClick={this.hideNavMenu}>
                         <ul className="header-nav-list">
                             <li><Link to="/"><FormattedMessage id="nav.home"/></Link></li>
                             <li><Link to="/blog"><FormattedMessage id="nav.blog"/></Link></li>

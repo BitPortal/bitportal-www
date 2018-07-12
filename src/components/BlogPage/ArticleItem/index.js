@@ -19,20 +19,24 @@ class ArticleItem extends React.Component{
             articleTag = <div className="article-tag">{this.props.articleData.node.tag}</div>
         }
         return (
-            <div className="col-sm-3">
-                <div className="article-item">
-                    {articleImg}
-                    <div className="article-item-padding-zone">
-                        {articleTag}
-                        <div className="article-title">{this.props.articleData.node.title}</div>
-                        <div className="article-content">
-                            {this.props.articleData.node.content}
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-3">
+                        <div className="article-item">
+                            {articleImg}
+                            <div className="article-item-padding-zone">
+                                {articleTag}
+                                <div className="article-title">{this.props.articleData.node.title}</div>
+                                <div className="article-content">
+                                    {this.props.articleData.node.content}
+                                </div>
+                                <a href={`/blog/${this.props.articleData.node.id}`}>
+                                    <button className="article-btn"><FormattedMessage id="viewMore"/></button>
+                                </a>
+                            </div>
+                            <div className="article-shadow"> </div>
                         </div>
-                        <a href={`/blog/${this.props.articleData.node.id}`}>
-                            <button className="article-btn"><FormattedMessage id="viewMore"/></button>
-                        </a>
                     </div>
-                    <div className="article-shadow"> </div>
                 </div>
             </div>
         )
