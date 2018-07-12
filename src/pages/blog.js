@@ -20,26 +20,32 @@ class BlogPage extends React.Component {
                         <SectionBanner hideDetail={true}/>
                     </Fade>
                     <Fade bottom>
-                        <div className="row">
-                            {this.data.allStrapiBanner.edges.map(document => (
-                                <BannerItem bannerData={document} key={document.node.id}/>
-                            ))}
+                        <div className="container">
+
+                            <div className="row">
+                                {this.data.allStrapiBanner.edges.map(document => (
+                                    <BannerItem bannerData={document} key={document.node.id}/>
+                                ))}
+                            </div>
                         </div>
                     </Fade>
                     <Fade bottom>
-                        <div className="row">
-                            {this.data.allStrapiArticle.edges.map(document => (
-                                <ArticleItem articleData={document} key={document.node.id}/>
-                                //   <li key={document.node.id}>
-                                //   <h2>
-                                //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
-                                //   </h2>
-                                //   <p>
-                                //     {document.node.content}
-                                //   </p>
-                                // </li>
-                            ))}
+                        <div className="container">
+                            <div className="row">
+                                {this.data.allStrapiArticle.edges.map(document => (
+                                    <ArticleItem articleData={document} key={document.node.id}/>
+                                    //   <li key={document.node.id}>
+                                    //   <h2>
+                                    //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
+                                    //   </h2>
+                                    //   <p>
+                                    //     {document.node.content}
+                                    //   </p>
+                                    // </li>
+                                ))}
+                            </div>
                         </div>
+
                     </Fade>
                 </div>
             </Layout>
