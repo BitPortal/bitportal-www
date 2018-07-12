@@ -76,7 +76,9 @@ class Header extends React.Component {
         return (
             <div className='container'>
                 <header>
-                    <img className='logo' src='/static/logo.png'/>
+                    <Link to={'/'}>
+                        <img className='logo' src='/static/logo.png'/>
+                    </Link>
                     <nav className="header-nav" onClick={this.hideNavMenu}>
                         <ul className="header-nav-list">
                             <li><Link to="/"><FormattedMessage id="nav.home"/></Link></li>

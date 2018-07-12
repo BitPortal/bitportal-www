@@ -1,6 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'Bitportal Blog',
+        siteUrl: `https://www.bitportal.io`,
     },
     plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-less',
         {
@@ -13,6 +14,10 @@ module.exports = {
                     'user'
                 ]
             }
+        },
+        {
+            resolve: `gatsby-plugin-sitemap`
         }
+
     ],
 }
