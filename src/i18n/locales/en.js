@@ -8,7 +8,7 @@ export default {
     'banner.title2': 'the Internet of Value.',
     'banner.text1': 'Realtime market data and comprehensive decentrilized projects information',
     'banner.text2': 'Secure EOS Wallet, a better solution for your convenient usage of crypto wallet',
-    'banner.text3': 'Decentralized Exchange base on BitPortal Protocol which will offer the best liquidity',
+    'banner.text3': 'Decentralized Exchange base on Dexlize Protocol which will offer the best liquidity',
     'viewMore': 'View More',
     'address': 'Shanghai Pudong New District',
     'comments': 'COMMENTS',
