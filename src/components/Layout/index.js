@@ -28,7 +28,7 @@ class Layout extends React.Component {
         return (
             <div className="index-root">
                 <Helmet>
-                    <title>Bitportal - The Portal of the Internet of value</title>
+                    <title>BitPortal - The Portal of the Internet of value</title>
                     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
                     <link rel="shortcut icon" href="/static/favicon.ico"/>
                     <link rel="canonical" href="https://www.bitportal.io/"/>
