@@ -2,6 +2,8 @@ export default {
     'title.index': 'BitPortal - The Portal of the Internet of Value',
     'nav.home': 'Home',
     'nav.blog': 'Blog',
+    'nav.tos': 'Term of Service',
+    'nav.releaseNotes': 'Release Notes',
     'banner.title1': 'The Portal of',
     'banner.title2': 'the Internet of Value.',
     'banner.text1': 'Realtime market data and comprehensive decentrilized projects information',

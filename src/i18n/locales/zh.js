@@ -2,6 +2,8 @@ export default {
     'title.index': '币通 - 去往数字资产世界的传送门',
     'nav.home': '首页',
     'nav.blog': '博客',
+    'nav.tos': '使用条款',
+    'nav.releaseNotes': '更新记录',
     'banner.title1': '币通',
     'banner.title2': '去往数字资产世界的传送门',
     'banner.text1': '实时市场数据与综合项目信息，专为数字资产投资者准备',

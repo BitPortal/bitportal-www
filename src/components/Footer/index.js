@@ -32,7 +32,9 @@ class Footer extends React.Component {
                         <div className="row">
                             <div className="col-md-2 col-xs-6">
                                 <ul className="footer-link-wrap">
-                                    <li><a href="#"><FormattedMessage id="nav.home"/></a></li>
+                                    <li><a href="/"><FormattedMessage id="nav.home"/></a></li>
+                                    <li><a href="/tos"><FormattedMessage id="nav.tos"/></a></li>
+                                    <li><a href="/release-notes"><FormattedMessage id="nav.releaseNotes"/></a></li>
                                 </ul>
                             </div>
                             <div className="col-md-2 col-xs-6">

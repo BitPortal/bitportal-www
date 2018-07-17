@@ -16,7 +16,7 @@ class Redirect extends PureComponent {
                 window.localStorage.getItem('language') ||
                 browserLang({
                     languages: langKeys,
-                    fallback: 'en',
+                    fallback: 'zh',
                 })
 
             const newUrl = withPrefix(`/${detected}${pathname}`)
