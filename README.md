@@ -9,13 +9,14 @@ Make sure that you have the Gatsby CLI program installed:
 npm install --global gatsby-cli
 ```
 
-And run from your CLI:
+## Develop
+
 ```sh
-gatsby new gatsby-example-site
+gatsby develop
 ```
 
-Then you can run it by:
+## Build
+
 ```sh
-cd gatsby-example-site
-gatsby develop
+gatsby build
 ```
