@@ -6,7 +6,8 @@ import './style.less'
 
 class SectionSubscribe extends React.Component {
     render() {
-        let MailComponent = true ? <SendCloud/> : <MailChimp/>
+        const currentLanguage = localStorage.getItem('language')
+        let MailComponent = currentLanguage === 'zh' ? <SendCloud/> : <MailChimp/>
         return (
             <section className='section-wrap section-subscribe-partners'>
                 <div className="container">

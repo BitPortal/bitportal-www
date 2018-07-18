@@ -34,9 +34,6 @@ class Header extends React.Component {
             language: lang,
             currentLanguage: lang === 'en' ? 'English' : '简体中文'
         })
-        console.log('****', originalPath)
-        console.log('****', location)
-
         localStorage.setItem('language', lang)
         window.location.href= `/${lang}${originalPath}`
     }
