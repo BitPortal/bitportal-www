@@ -26,9 +26,9 @@ class ArticlePage extends React.Component {
                         <Fade bottom>
                             <div className="bread-crumb">
                                 <a href="http://www.corp.bitportal.io" className="bread-crumb-link"><FormattedMessage
-                                    id="nav.home"/></a> - <a href="http://35.194.142.236:8000"
+                                    id="nav.home"/></a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://35.194.142.236:8000"
                                                              className="bread-crumb-link"><FormattedMessage
-                                id="nav.blog"/></a> - <span
+                                id="nav.blog"/></a>&nbsp;&nbsp;-&nbsp;&nbsp;<span
                                 className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                             </div>
                         </Fade>

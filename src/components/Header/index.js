@@ -13,7 +13,6 @@ class Header extends React.Component {
         this.switchLanguage = this.switchLanguage.bind(this)
         this.toggleLanguageMenu = this.toggleLanguageMenu.bind(this)
         this.toggleNavMenu = this.toggleNavMenu.bind(this)
-        this.hideNavMenu = this.hideNavMenu.bind(this)
         let initLanguage = ''
         if (typeof localStorage !== 'undefined' && localStorage.getItem('language') !== ''){
             initLanguage = localStorage.getItem('language')
@@ -58,10 +57,10 @@ class Header extends React.Component {
             headerNav.style.display = 'none'
         }
     }
-
-    hideNavMenu () {
-        document.getElementsByClassName('header-nav')[0].style.display = 'none'
-    }
+    //
+    // hideNavMenu () {
+    //     document.getElementsByClassName('header-nav')[0].style.display = 'none'
+    // }
 
     render() {
         let languageItem = ''
@@ -78,7 +77,7 @@ class Header extends React.Component {
                     <Link to={'/'}>
                         <img className='logo' src='/static/logo.png'/>
                     </Link>
-                    <nav className="header-nav" onClick={this.hideNavMenu}>
+                    <nav className="header-nav">
                         <ul className="header-nav-list">
                             <li><Link to="/"><FormattedMessage id="nav.home"/></Link></li>
                             <li><Link to="/blog"><FormattedMessage id="nav.blog"/></Link></li>
