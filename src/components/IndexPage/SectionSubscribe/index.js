@@ -14,10 +14,10 @@ class SectionSubscribe extends React.Component {
                     <div className="section-subscribe">
                         <h2 className="section-title title-features"><FormattedMessage id="subscribe.title"/></h2>
                         <div className='section-text text-features'>
-                            <FormattedMessage id="subscribe.text1"/><br/><br/>
+                            <FormattedMessage id="subscribe.text1"/><br/>
                             <FormattedMessage id="subscribe.text2"/>
                         </div>
-                        <div className='subscribe-form'>
+                        <div className='subscribe-form-wrap'>
                             {MailComponent}
                         </div>
                     </div>
