@@ -19,7 +19,7 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
     )
 })
 
-exports.createPages = ({boundActionCreators, graphql}) => {
+exports.createPages = ({boundActionCreators, graphql, page}) => {
     const {createPage} = boundActionCreators
     const getArticles = makeRequest(graphql, `
         {
@@ -33,12 +33,19 @@ exports.createPages = ({boundActionCreators, graphql}) => {
         }
      `).then(result => {
         result.data.allStrapiArticle.edges.forEach(({node}) => {
-            createPage({
-                path: `/blog/${node.id}`,
-                component: path.resolve('src/pages/article.js'),
-                context: {
-                    id: node.id
-                }
+            languages.forEach(({value}) => {
+                createPage({
+                    path: `/${value}/blog/${node.id}`,
+                    component: path.resolve('src/pages/article.js'),
+                    context: {
+                        id: node.id,
+                        originalPath: `/blog/${node.id}`,
+                        languages,
+                        locale: value,
+                        route: true
+
+                    }
+                })
             })
         })
     })

@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.less'
 import {FormattedMessage} from 'react-intl'
+import {Link} from '../../../i18n'
 
 class ArticleItem extends React.Component {
     componentWillMount() {
@@ -29,9 +30,9 @@ class ArticleItem extends React.Component {
                         <div className="article-content">
                             {this.props.articleData.node.content}
                         </div>
-                        <a href={`/blog/${this.props.articleData.node.id}`}>
+                        <Link to={`/blog/${this.props.articleData.node.id}`}>
                             <button className="article-btn"><FormattedMessage id="viewMore"/></button>
-                        </a>
+                        </Link>
                     </div>
                     <div className="article-shadow"></div>
                 </div>

@@ -29,12 +29,14 @@ class Header extends React.Component {
     }
 
     switchLanguage(lang, event) {
-        const originalPath = this.context.language.originalPath || '/'
+        const originalPath = this.context.language.originalPath || this.context.originalPath || '/'
         this.setState({
             language: lang,
             currentLanguage: lang === 'en' ? 'English' : '简体中文'
         })
-        console.log(123)
+        console.log('****', originalPath)
+        console.log('****', location)
+
         localStorage.setItem('language', lang)
         window.location.href= `/${lang}${originalPath}`
     }
