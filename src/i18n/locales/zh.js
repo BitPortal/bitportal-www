@@ -33,5 +33,6 @@ export default {
     'subscribe.text1': '参与社区活动',
     'subscribe.text2': '获取最新资讯',
     'subscribe.emailHint': '请输入您的邮箱',
-    'partners.title': '合作伙伴'
+    'partners.title': '合作伙伴',
+    'article.shareTo': '分享到'
 }

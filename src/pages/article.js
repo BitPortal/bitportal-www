@@ -54,7 +54,7 @@ class ArticlePage extends React.Component {
                             </div>
                             <div className="row article-share-group">
                                 <div className="col-sm-10 col-sm-offset-2">
-                                    <div className="article-share-hint">分享到</div>
+                                    <div className="article-share-hint"><FormattedMessage id="article.shareTo"/></div>
                                     <ShareGroup theme={'gradient'}/>
                                 </div>
                             </div>

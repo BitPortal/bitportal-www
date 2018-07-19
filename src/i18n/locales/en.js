@@ -33,5 +33,6 @@ export default {
     'subscribe.text1': 'Participate our community events',
     'subscribe.text2': 'Receive the newest progress',
     'subscribe.emailHint': 'Your Email (required)',
-    'partners.title': 'Partners'
+    'partners.title': 'Partners',
+    'article.shareTo': 'Share to'
 }
