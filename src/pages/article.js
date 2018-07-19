@@ -2,7 +2,7 @@ import React from 'react'
 import SectionBanner from '../components/IndexPage/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
 import Layout from '../components/Layout'
-import {withIntl} from '../i18n'
+import {withIntl, Link} from '../i18n'
 import Markdown from 'react-markdown'
 import {FormattedMessage} from 'react-intl'
 
@@ -23,10 +23,10 @@ class ArticlePage extends React.Component {
                     <SectionBanner hideDetail={true}/>
                     <div className="container">
                         <div className="bread-crumb">
-                            <a href="http://www.corp.bitportal.io" className="bread-crumb-link"><FormattedMessage
-                                id="nav.home"/></a>&nbsp;&nbsp;-&nbsp;&nbsp;<a href="http://35.194.142.236:8000"
+                            <Link to="/" className="bread-crumb-link"><FormattedMessage
+                                id="nav.home"/></Link>&nbsp;&nbsp;-&nbsp;&nbsp;<Link to="/blog"
                                                                                className="bread-crumb-link"><FormattedMessage
-                            id="nav.blog"/></a>&nbsp;&nbsp;-&nbsp;&nbsp;<span
+                            id="nav.blog"/></Link>&nbsp;&nbsp;-&nbsp;&nbsp;<span
                             className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                         </div>
                         <div className="article-page-wrap">
@@ -43,7 +43,7 @@ class ArticlePage extends React.Component {
                                     </div>
                                 </div>
                                 <div className="col-sm-10">
-                                    <div className="article-tag">{this.data.strapiArticle.tag}</div>
+                                    <div className="article-tag">#{this.data.strapiArticle.tag}</div>
                                     <h1 className="article-title">{this.data.strapiArticle.title}</h1>
                                     <div className="article-title-divider"></div>
                                     <div className="article-content">
