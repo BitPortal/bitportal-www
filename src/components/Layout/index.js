@@ -15,7 +15,7 @@ import MobileBlocks from '../IndexPage/MobileBlocks'
 
 
 /* enable animation ssr */
-config({ssrFadeout: true})
+// config({ssrFadeout: true})
 
 class Layout extends React.Component {
     constructor({props, children, data, intl}) {
