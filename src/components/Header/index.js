@@ -65,11 +65,9 @@ class Header extends React.Component {
     render() {
         let languageItem = ''
         if (this.state.language === 'en') {
-            languageItem = <li onClick={this.switchLanguage.bind(this, 'zh')}><Link
-                to="#">简体中文</Link></li>
+            languageItem = <li onClick={this.switchLanguage.bind(this, 'zh')}>简体中文</li>
         } else {
-            languageItem = <li onClick={this.switchLanguage.bind(this, 'en')}><Link
-                to="#">English</Link></li>
+            languageItem = <li onClick={this.switchLanguage.bind(this, 'en')}>English</li>
         }
         return (
             <div className='container'>
