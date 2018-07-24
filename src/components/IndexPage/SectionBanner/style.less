@@ -1,7 +1,7 @@
 .section-banner {
   color: #fff;
-  &.hideDetail{
-    .page-banner-text-wrap, .page-banner-download-wrap{
+  &.hideDetail {
+    .page-banner-text-wrap, .page-banner-download-wrap {
       display: none;
     }
     .page-banner-title {
@@ -51,16 +51,27 @@
   .android-download {
     width: 100%;
   }
-  @media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .section-banner {
     background: none;
     position: relative;
     z-index: 10;
     margin-top: 0;
     .page-banner-title {
-      margin-top: 97px;
-      font-size: 22px;
+      font-size: 24px;
     }
-
+    &.hideDetail {
+      .page-banner-text-wrap, .page-banner-download-wrap {
+        display: none;
+      }
+      .page-banner-title {
+        margin-top: 64px;
+        margin-bottom: 48px;
+      }
+    }
     .page-banner-download-ios {
       margin-right: 10px;
     }

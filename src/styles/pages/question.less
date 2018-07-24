@@ -1,17 +1,16 @@
 .question-page{
   padding-bottom: 54px;
-  .container{
-    padding-left: 24px;
-    padding-right: 24px;
-  }
   .bread-crumb{
+    .container{
+      width: 100%;
+    }
     background: #fff;
     border-radius: 5px;
     margin-bottom: 15px;
     height: 60px;
     line-height: 60px;
     font-size: 14px;
-    padding: 0 50px;
+
     color: #4a4a4a;
     white-space: nowrap;
     overflow: hidden;
@@ -26,7 +25,9 @@
   .question-page-wrap{
     background: #fff;
     border-radius: 5px;
-    padding: 0 32px;
+    .container{
+      width: 100%;
+    }
     .question-avatar {
       width: 108px;
       height: 108px;
@@ -106,7 +107,6 @@
 @media screen and (max-width: 768px) {
   .question-page{
     .question-page-wrap{
-      padding: 0 16px 0 20px;
       .question-title{
         font-size: 32px;
       }

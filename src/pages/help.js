@@ -7,16 +7,30 @@ import PageBanner from "../components/PageBanner";
 class HelpPage extends React.Component {
     constructor({props, data}) {
         super(props)
+        let initQuestionsData = this.initQuestions(data)
+        let webviewMode = this.judgeWebviewMode()
+        console.log(webviewMode)
+        this.filtQuestions = this.filtQuestions.bind(this)
+
+        this.state = {
+            questions: initQuestionsData.questionData,
+            types: initQuestionsData.filteredTypeData,
+            webview: webviewMode
+        }
+    }
+
+    judgeWebviewMode () {
+        return typeof location !== 'undefined' && location.href.indexOf('webview=true') > -1
+    }
+
+    initQuestions(data) {
         let questionData = [], typeData = [], filteredTypeData = [];
-
         //add 'all' to filters
-        typeData.push({title:'全部', status:'on'})
-
+        typeData.push({title: '全部', status: 'on'})
         data.allStrapiQuestion.edges.forEach((document) => {
             let item = document.node;
             //show items
             item.show = true
-
             if (item.type) {
                 typeData.push({
                     title: item.type,
@@ -36,12 +50,11 @@ class HelpPage extends React.Component {
             })
             questionData.push(item)
         })
-        this.state = {
-            questions: questionData,
-            types: filteredTypeData
+        return  {
+            filteredTypeData,
+            questionData
         }
 
-        this.filtQuestions = this.filtQuestions.bind(this)
     }
 
     filtQuestions(filterItem) {
@@ -73,7 +86,7 @@ class HelpPage extends React.Component {
         return (
             <Layout>
                 <div className="help-page" style={{paddingBottom: '54px'}}>
-                    <PageBanner pageTitle={'nav.helpCenter'}/>
+                    <PageBanner pageTitle={'nav.helpCenter'}/>å
                     <div className="container">
                         <div className="help-content-wrap">
                             <ul className="help-page-filter">
@@ -89,7 +102,7 @@ class HelpPage extends React.Component {
                                 {this.state.questions.map(item => {
                                     return (
                                         <li key={item.id} className={item.show ? '' : 'hidden'}>
-                                            <Link to={`/question/${item.id}`}>{item.title}</Link>
+                                            <Link to={`/question/${item.id}${this.state.webview ? '?webview=true' : ''}`}>{item.title}</Link>
                                         </li>
                                     )
                                 })}

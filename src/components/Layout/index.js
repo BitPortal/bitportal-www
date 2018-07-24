@@ -18,13 +18,26 @@ import MobileBlocks from '../IndexPage/MobileBlocks'
 // config({ssrFadeout: true})
 
 class Layout extends React.Component {
-    constructor({props, children, data, intl}) {
+    constructor({props, children, data}) {
         super(props)
         this.data = data
         this.children = children
+        this.state = {
+            webview: false
+        }
+    }
+
+    componentWillMount() {
+        //webview mode, will hide header and footer
+        if(typeof location !== 'undefined' && location.href.indexOf('webview=true') !== -1){
+            this.setState({
+                webview: true
+            })
+        }
     }
 
     render() {
+
         return (
             <div className="index-root">
                 <Helmet>
@@ -53,11 +66,11 @@ class Layout extends React.Component {
                     <meta property="og:url" content="https://www.bitportal.io/"/>
                     <meta property="og:site_name" content="BitPortal'"/>
                 </Helmet>
-                <Header/>
+                {this.state.webview || <Header/>}
                 <div>
                     {this.props.children}
                 </div>
-                <Footer/>
+                {this.state.webview || <Footer/>}
                 <MobileBlocks/>
             </div>
         )
