@@ -36,7 +36,6 @@ class HelpPage extends React.Component {
             })
             questionData.push(item)
         })
-            console.log(questionData)
         this.state = {
             questions: questionData,
             types: filteredTypeData

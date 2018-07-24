@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.less'
 import {FormattedMessage} from 'react-intl'
-import {Link} from '../../../../i18n'
+import {Link} from '../../../i18n'
 
 class ArticleItem extends React.Component {
     componentWillMount() {

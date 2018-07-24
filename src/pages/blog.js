@@ -1,7 +1,7 @@
 import React from 'react'
-import BannerItem from './components/BlogPage/BannerItem'
-import ArticleItem from './components/BlogPage/ArticleItem'
-import SectionBanner from './components/IndexPage/SectionBanner'
+import BannerItem from '../components/BlogPage/BannerItem'
+import ArticleItem from '../components/BlogPage/ArticleItem'
+import SectionBanner from '../components/IndexPage/SectionBanner'
 import Layout from '../components/Layout'
 import {withIntl, Link} from '../i18n'
 

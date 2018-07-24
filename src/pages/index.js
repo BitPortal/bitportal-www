@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionBanner from './components/IndexPage/SectionBanner'
-import SectionFeature from './components/IndexPage/SectionFeature'
-import SectionSubscribe from './components/IndexPage/SectionSubscribe'
+import SectionBanner from '../components/IndexPage/SectionBanner'
+import SectionFeature from '../components/IndexPage/SectionFeature'
+import SectionSubscribe from '../components/IndexPage/SectionSubscribe'
 import Layout from '../components/Layout'
 import {withIntl} from '../i18n'
 import '../styles/pages/index.less';

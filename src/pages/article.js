@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionBanner from './components/IndexPage/SectionBanner'
+import SectionBanner from '../components/IndexPage/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
 import Layout from '../components/Layout'
 import {withIntl, Link} from '../i18n'

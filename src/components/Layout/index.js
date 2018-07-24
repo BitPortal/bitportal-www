@@ -11,7 +11,7 @@ import './style.less'
 
 import Header from '../Header'
 import Footer from '../Footer'
-import MobileBlocks from '../../pages/components/IndexPage/MobileBlocks'
+import MobileBlocks from '../IndexPage/MobileBlocks'
 
 
 /* enable animation ssr */
