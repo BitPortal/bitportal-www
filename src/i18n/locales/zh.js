@@ -1,9 +1,11 @@
 export default {
+    'name': '币通',
     'title.index': '币通 - 去往数字资产世界的传送门',
     'nav.home': '首页',
     'nav.blog': '博客',
     'nav.tos': '使用条款',
     'nav.releaseNotes': '更新记录',
+    'nav.helpCenter': '帮助中心',
     'banner.title1': '币通',
     'banner.title2': '去往数字资产世界的传送门',
     'banner.text1': '实时市场数据与综合项目信息，专为数字资产投资者准备',
@@ -34,5 +36,5 @@ export default {
     'subscribe.text2': '获取最新资讯',
     'subscribe.emailHint': '请输入您的邮箱',
     'partners.title': '合作伙伴',
-    'article.shareTo': '分享到'
+    'share.shareTo': '分享到'
 }

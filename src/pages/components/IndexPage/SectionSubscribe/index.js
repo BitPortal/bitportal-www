@@ -1,8 +1,8 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
 import Fade from 'react-reveal/Fade'
-import SendCloud from '../../Email/SendCloud'
-import MailChimp from '../../Email/MailChimp'
+import SendCloud from '../../../../components/Email/SendCloud/index'
+import MailChimp from '../../../../components/Email/MailChimp/index'
 import './style.less'
 
 class SectionSubscribe extends React.Component {

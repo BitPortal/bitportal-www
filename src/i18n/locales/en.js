@@ -1,9 +1,11 @@
 export default {
+    'name': 'BitPortal',
     'title.index': 'BitPortal - The Portal of the Internet of Value',
     'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.tos': 'Term of Service',
     'nav.releaseNotes': 'Release Notes',
+    'nav.helpCenter': 'Help Center',
     'banner.title1': 'The Portal of',
     'banner.title2': 'the Internet of Value.',
     'banner.text1': 'Realtime market data and comprehensive decentrilized projects information',
@@ -33,6 +35,5 @@ export default {
     'subscribe.text1': 'Participate our community events',
     'subscribe.text2': 'Receive the newest progress',
     'subscribe.emailHint': 'Your Email (required)',
-    'partners.title': 'Partners',
-    'article.shareTo': 'Share to'
+    'share.shareTo': 'Share to'
 }

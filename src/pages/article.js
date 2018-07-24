@@ -1,12 +1,12 @@
 import React from 'react'
-import SectionBanner from '../components/IndexPage/SectionBanner'
+import SectionBanner from './components/IndexPage/SectionBanner'
 import ShareGroup from '../components/ShareGroup'
 import Layout from '../components/Layout'
 import {withIntl, Link} from '../i18n'
 import Markdown from 'react-markdown'
 import {FormattedMessage} from 'react-intl'
 
-import './article.less'
+import '../styles/pages/article.less'
 
 class ArticlePage extends React.Component {
     constructor({props, data}) {
@@ -23,11 +23,13 @@ class ArticlePage extends React.Component {
                     <SectionBanner hideDetail={true}/>
                     <div className="container">
                         <div className="bread-crumb">
-                            <Link to="/" className="bread-crumb-link"><FormattedMessage
-                                id="nav.home"/></Link>&nbsp;&nbsp;-&nbsp;&nbsp;<Link to="/blog"
-                                                                               className="bread-crumb-link"><FormattedMessage
-                            id="nav.blog"/></Link>&nbsp;&nbsp;-&nbsp;&nbsp;<span
-                            className="bread-crumb-title">{this.data.strapiArticle.title}</span>
+                            <Link to="/" className="bread-crumb-link">
+                                <FormattedMessage id="nav.home"/>
+                            </Link>&nbsp;&nbsp;-&nbsp;&nbsp;
+                            <Link to="/blog" className="bread-crumb-link">
+                                <FormattedMessage id="nav.blog"/>
+                            </Link>&nbsp;&nbsp;-&nbsp;&nbsp;
+                            <span className="bread-crumb-title">{this.data.strapiArticle.title}</span>
                         </div>
                         <div className="article-page-wrap">
                             <div className="row">
@@ -54,7 +56,7 @@ class ArticlePage extends React.Component {
                             </div>
                             <div className="row article-share-group">
                                 <div className="col-sm-10 col-sm-offset-2">
-                                    <div className="article-share-hint"><FormattedMessage id="article.shareTo"/></div>
+                                    <div className="article-share-hint"><FormattedMessage id="share.shareTo"/></div>
                                     <ShareGroup theme={'gradient'}/>
                                 </div>
                             </div>

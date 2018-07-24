@@ -11,7 +11,8 @@ module.exports = {
                 contentTypes: [
                     'article',
                     'banner',
-                    'user'
+                    'user',
+                    'question'
                 ]
             }
         },

@@ -29,6 +29,13 @@ exports.createPages = ({boundActionCreators, graphql, page}) => {
                         id
                     }
                 }
+            },
+            allStrapiQuestion {
+                edges {
+                    node {
+                        id
+                    }
+                }
             }
         }
      `).then(result => {
@@ -44,6 +51,22 @@ exports.createPages = ({boundActionCreators, graphql, page}) => {
                         locale: value,
                         route: true
 
+                    }
+                })
+            })
+        })
+
+        result.data.allStrapiQuestion.edges.forEach(({node}) => {
+            languages.forEach(({value}) => {
+                createPage({
+                    path: `/${value}/question/${node.id}`,
+                    component: path.resolve('src/pages/question.js'),
+                    context: {
+                        id: node.id,
+                        originalPath: `/blog/${node.id}`,
+                        languages,
+                        locale: value,
+                        route: true
                     }
                 })
             })
