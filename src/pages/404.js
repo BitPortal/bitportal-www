@@ -1,10 +1,16 @@
 import React from 'react'
+import Layout from '../components/Layout'
+import {withIntl} from '../i18n'
+import FormattedMessage from 'react-intl'
+import '../styles/pages/404.less'
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  <Layout>
+    <div className="not-found-page">
+      <h1><FormattedMessage id="404.title"/></h1>
+      <p><FormattedMessage id="404.content"/></p>
+    </div>
+  </Layout>
 )
 
-export default NotFoundPage
+export default withIntl(NotFoundPage)

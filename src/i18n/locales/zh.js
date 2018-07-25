@@ -36,5 +36,7 @@ export default {
     'subscribe.text2': '获取最新资讯',
     'subscribe.emailHint': '请输入您的邮箱',
     'partners.title': '合作伙伴',
-    'share.shareTo': '分享到'
+    'share.shareTo': '分享到',
+    '404.title': '404错误',
+    '404.content': '未找到您请求的页面'
 }
