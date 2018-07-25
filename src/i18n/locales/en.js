@@ -35,6 +35,7 @@ export default {
     'subscribe.text1': 'Participate our community events',
     'subscribe.text2': 'Receive the newest progress',
     'subscribe.emailHint': 'Your Email (required)',
+    'partners.title': 'Partners',
     'share.shareTo': 'Share to',
     'notFound.title': 'Not Found',
     'notFound.content': 'The page you requested could not be found'
