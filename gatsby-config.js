@@ -7,11 +7,10 @@ module.exports = {
         {
             resolve: 'gatsby-source-strapi',
             options: {
-                apiURL: 'http://35.194.142.236:1337',
+                apiURL: 'http://35.229.160.227',
                 contentTypes: [
                     'article',
                     'banner',
-                    'user',
                     'question'
                 ]
             }

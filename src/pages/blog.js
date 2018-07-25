@@ -11,6 +11,10 @@ class BlogPage extends React.Component {
         this.data = data
     }
 
+    componentWillMount () {
+
+    }
+
     render() {
         return (
             <Layout>
@@ -60,6 +64,7 @@ export const pageQuery = graphql`
           type
           status
           tag
+          display_priority
         }
       }
     }

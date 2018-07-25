@@ -38,7 +38,7 @@ class ArticlePage extends React.Component {
                                         <img src={this.data.strapiArticle.author.avatar_url}/>
                                     </div>
                                     <div className="article-username">
-                                        {this.data.strapiArticle.author.username}
+                                        {this.data.strapiArticle.author.name}
                                     </div>
                                     <div className="article-updated-at">
                                         <span className="icon icon-time"> </span> {articleUpdatedAt}
@@ -85,7 +85,7 @@ export const query = graphql`
             content
             author {
                 id
-                username
+                name
                 avatar_url
             }
             createdAt
