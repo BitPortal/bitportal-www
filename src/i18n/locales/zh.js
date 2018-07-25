@@ -4,7 +4,7 @@ export default {
     'nav.home': '首页',
     'nav.blog': '博客',
     'nav.tos': '使用条款',
-    'nav.releaseNotes': '更新记录',
+    'nav.releaseNotes': '更新日志',
     'nav.helpCenter': '帮助中心',
     'banner.title1': '币通',
     'banner.title2': '去往数字资产世界的传送门',
