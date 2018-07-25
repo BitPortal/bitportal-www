@@ -1,11 +1,16 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import {withIntl} from '../i18n'
+
 import {FormattedMessage} from 'react-intl'
 import '../styles/pages/404.less'
 
-class NotFoundPage extends React.Component{
-    render () {
+class NotFoundPage extends React.Component {
+    constructor({props, data}) {
+        super(props)
+        this.data = data
+    }
+
+    render() {
         return (
             <Layout>
                 <div className="not-found-page">
@@ -17,4 +22,4 @@ class NotFoundPage extends React.Component{
     }
 }
 
-export default withIntl(NotFoundPage)
+export default NotFoundPage
