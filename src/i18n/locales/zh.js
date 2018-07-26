@@ -31,6 +31,7 @@ export default {
     'marketInformation.text1': '实时的交易数据，让您把握每次投资机遇',
     'marketInformation.text2': '全面的项目信息，未战敌而先知敌',
     'marketInformation.text3': '简约的成本计算，风险控制心细如丝',
+    'subscribe': '订阅',
     'subscribe.title': '订阅',
     'subscribe.text1': '参与社区活动',
     'subscribe.text2': '获取最新资讯',

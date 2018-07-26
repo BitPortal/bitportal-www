@@ -1,7 +1,7 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
 import Fade from 'react-reveal/Fade'
-import MailChimp from '../../Email/MailChimp/index'
+import Email from '../../Email'
 import './style.less'
 
 class SectionSubscribe extends React.Component {
@@ -17,7 +17,7 @@ class SectionSubscribe extends React.Component {
                                 <FormattedMessage id="subscribe.text2"/>
                             </div>
                             <div className='subscribe-form-wrap'>
-                                <MailChimp/>
+                                <Email type={'mailchimp'}/>
                             </div>
                         </div>
                     </Fade>

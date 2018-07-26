@@ -1,0 +1,47 @@
+.email-wrap {
+  margin: 20px auto 16px auto;
+  width: 50%;
+  height: 60px;
+  input {
+    color: #4a4a4a;
+    width: 80%;
+    height: 60px;
+    float: left;
+    padding: 0 0 0 32px;
+    border: none;
+  }
+  button {
+    color: #fff;
+    background: -webkit-linear-gradient(left top, #59b0d6, #367fc0);
+    background: -o-linear-gradient(bottom right, #59b0d6, #367fc0);
+    background: -moz-linear-gradient(bottom right, #59b0d6, #367fc0);
+    background: linear-gradient(to bottom right, #59b0d6, #367fc0);
+    width: 20%;
+    height: 60px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .email-wrap{
+    width: 100%;
+    input {
+      width: 70%;
+    }
+    button {
+      width: 30%;
+    }
+  }
+
+}
+
+//dialog specific styles
+.dialog{
+  .email-wrap{
+    width: 80%;
+    input {
+      border: 1px solid #eee;
+      background: #f4f4f4;
+    }
+  }
+}

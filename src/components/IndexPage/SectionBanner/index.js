@@ -2,10 +2,17 @@ import React from 'react'
 import './style.less'
 import Fade from 'react-reveal/Fade'
 import {FormattedMessage} from 'react-intl'
+import Dialog from '../../Dialog'
+import Email from '../../Email'
 
 class SectionBanner extends React.Component {
     constructor(props) {
         super(props)
+        this.showSubscribeDialog = this.showSubscribeDialog.bind(this)
+        this.hideSubscribeDialog = this.hideSubscribeDialog.bind(this)
+        this.state = {
+            showSubscribeDialog: false
+        }
     }
 
     componentDidMount() {
@@ -14,13 +21,34 @@ class SectionBanner extends React.Component {
         }
     }
 
-    render() {
+    showSubscribeDialog () {
+        this.setState({
+            showSubscribeDialog: true
+        })
+    }
 
+    hideSubscribeDialog () {
+        this.setState({
+            showSubscribeDialog: false
+        })
+    }
+
+    render() {
+        const SubscribeDialog = <Dialog hideDialog={this.hideSubscribeDialog}>
+            <div className="section-subscribe">
+                <h2 className="section-title title-features"><FormattedMessage id="subscribe.title"/></h2>
+                <div className='section-text text-features'>
+                    <FormattedMessage id="subscribe.text1"/><br/>
+                    <FormattedMessage id="subscribe.text2"/>
+                </div>
+                <Email type={'mailchimp'}/>
+            </div>
+        </Dialog>
         return (
             <section className='section-wrap section-banner'>
                 <div className='container'>
                     <div className='page-banner-title'>
-                        <FormattedMessage id='banner.title1' defaultMessage={'title1'}/><br/>
+                        <FormattedMessage id='banner.title1'/><br/>
                         <FormattedMessage
                             id="banner.title2"/>
                     </div>
@@ -50,9 +78,14 @@ class SectionBanner extends React.Component {
                                     <img className='android-download' src='/static/android-download.png'/>
                                 </a>
                             </div>
+                            <button className="page-banner-subscribe" onClick={this.showSubscribeDialog}>
+                                <span className="icon icon-pin"/>
+                                <FormattedMessage id="subscribe"/>
+                            </button>
                         </div>
                     </Fade>
                 </div>
+                {this.state.showSubscribeDialog && SubscribeDialog}
             </section>
         )
     }
