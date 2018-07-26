@@ -1,17 +1,11 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
 import Fade from 'react-reveal/Fade'
-import SendCloud from '../../Email/SendCloud/index'
 import MailChimp from '../../Email/MailChimp/index'
 import './style.less'
 
 class SectionSubscribe extends React.Component {
     render() {
-        let currentLanguage = '';
-        if (typeof localStorage !== 'undefined') {
-            currentLanguage = localStorage.getItem('language')
-        }
-        let MailComponent = currentLanguage === 'zh' ? <SendCloud/> : <MailChimp/>
         return (
             <section className='section-wrap section-subscribe-partners'>
                 <div className="container">
@@ -23,7 +17,7 @@ class SectionSubscribe extends React.Component {
                                 <FormattedMessage id="subscribe.text2"/>
                             </div>
                             <div className='subscribe-form-wrap'>
-                                {MailComponent}
+                                <MailChimp/>
                             </div>
                         </div>
                     </Fade>
