@@ -10,16 +10,19 @@ class SectionSubscribe extends React.Component {
             <section className='section-wrap section-subscribe-partners'>
                 <div className="container">
                     <Fade bottom>
-                        <div className="section-subscribe">
-                            <h2 className="section-title title-features"><FormattedMessage id="subscribe.title"/></h2>
-                            <div className='section-text text-features'>
-                                <FormattedMessage id="subscribe.text1"/><br/>
-                                <FormattedMessage id="subscribe.text2"/>
+                        <a className="section-subscribe-wrapper" name="subscribe">
+                            <div className="section-subscribe">
+                                <h2 className="section-title title-features"><FormattedMessage id="subscribe.title"/>
+                                </h2>
+                                <div className='section-text text-features'>
+                                    <FormattedMessage id="subscribe.text1"/><br/>
+                                    <FormattedMessage id="subscribe.text2"/>
+                                </div>
+                                <div className='subscribe-form-wrap'>
+                                    <Email type={'mailchimp'}/>
+                                </div>
                             </div>
-                            <div className='subscribe-form-wrap'>
-                                <Email type={'mailchimp'}/>
-                            </div>
-                        </div>
+                        </a>
                     </Fade>
                     <Fade bottom>
                         <div className="section-partners">
