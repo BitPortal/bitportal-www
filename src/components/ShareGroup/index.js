@@ -4,6 +4,12 @@ import ChinaShare from 'social-share-react'
 import './style.less'
 
 class ShareGroup extends React.Component {
+    componentDidMount () {
+        //add text for weibo and wechat
+        let weiboText = document.createElement('span')
+        weiboText.innerHTML = 'Weibo'
+        document.getElementsByClassName('icon-wechat')[0].parentNode.appendChild(weiboText)
+    }
     render() {
         let socialLinkType = this.props.linkType,
             currentLocation = typeof location !== 'undefined' ? location.href : '',
@@ -35,9 +41,9 @@ class ShareGroup extends React.Component {
                     </a>
                 </div>
                 <div className='col-xs-6 col-sm-4 col-md-2'>
-                    <ChinaShare url={currentLocation} initialized={false} sites={['wechat']}>
+                    <ChinaShare url={currentLocation} sites={['wechat']}>
                         <a href="#" key='wechat' className='social-link-item'>
-                            <span className="icon icon-wechat"></span>
+                            <span className="icon icon-weixin"></span>
                             <span className="social-link-text">Wechat</span>
                         </a>
                     </ChinaShare>
