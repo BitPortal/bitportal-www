@@ -1,6 +1,6 @@
 import React from 'react'
 import {TelegramShareButton, TwitterShareButton, FacebookShareButton} from 'react-share'
-import ChinaShare from 'social-share-react'
+// import ChinaShare from 'social-share-react'
 import './style.less'
 
 class ShareGroup extends React.Component {
@@ -40,22 +40,22 @@ class ShareGroup extends React.Component {
                         </TelegramShareButton>
                     </a>
                 </div>
-                <div className='col-xs-6 col-sm-4 col-md-2'>
-                    <ChinaShare url={currentLocation} sites={['wechat']}>
-                        <a href="#" key='wechat' className='social-link-item'>
-                            <span className="icon icon-weixin"></span>
-                            <span className="social-link-text">Wechat</span>
-                        </a>
-                    </ChinaShare>
-                </div>
-                <div className='col-xs-6 col-sm-4 col-md-2'>
-                    <ChinaShare url={currentLocation} sites={['weibo']}>
-                        <a href="#" key='weibo' className='social-link-item'>
-                            <span className="icon icon-weibo"></span>
-                            <span className="social-link-text">Weibo</span>
-                        </a>
-                    </ChinaShare>
-                </div>
+                {/*<div className='col-xs-6 col-sm-4 col-md-2'>*/}
+                    {/*<ChinaShare url={currentLocation} sites={['wechat']}>*/}
+                        {/*<a href="#" key='wechat' className='social-link-item'>*/}
+                            {/*/!*<span className="icon icon-weixin"></span>*!/*/}
+                            {/*/!*<span className="social-link-text">Wechat</span>*!/*/}
+                        {/*</a>*/}
+                    {/*</ChinaShare>*/}
+                {/*</div>*/}
+                {/*<div className='col-xs-6 col-sm-4 col-md-2'>*/}
+                    {/*<ChinaShare url={currentLocation} sites={['weibo']}>*/}
+                        {/*<a href="#" key='weibo' className='social-link-item'>*/}
+                            {/*/!*<span className="icon icon-weibo"></span>*!/*/}
+                            {/*/!*<span className="social-link-text">Weibo</span>*!/*/}
+                        {/*</a>*/}
+                    {/*</ChinaShare>*/}
+                {/*</div>*/}
             </div>
         } else {
             ShareBlock = <div className='row social-link social-link-dark'>
