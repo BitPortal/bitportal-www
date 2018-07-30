@@ -48,7 +48,7 @@ class Footer extends React.Component {
                                 <span className="icon icon-locate"></span>
                             </div>
                         </div>
-                        <ShareGroup theme={'dark'}/>
+                        <ShareGroup linkType={'follow'}/>
                     </div>
                     <div className="footer-logo">
                         <div className="container">

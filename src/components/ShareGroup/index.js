@@ -1,17 +1,54 @@
 import React from 'react'
+import {TelegramShareButton, TwitterShareButton, FacebookShareButton} from 'react-share'
 import './style.less'
 
 class ShareGroup extends React.Component {
     render() {
-        let socialLinkTheme = this.props.theme
-        let socialLinkClass = ''
-        if (socialLinkTheme === 'gradient') {
-            socialLinkClass = 'row social-link social-link-gradient'
+        let socialLinkType = this.props.linkType,
+            currentLocation = typeof location !== 'undefined' ? location.href : '',
+            ShareBlock
+        if (socialLinkType === 'share') {
+            ShareBlock = <div className='row social-link social-link-gradient'>
+                <div className="col-xs-6 col-sm-4 col-md-2">
+                    <a className="social-link-item">
+                        <FacebookShareButton>
+                            <span className="icon icon-github"></span>
+                            <span className="social-link-text">Facebook</span>
+                        </FacebookShareButton>
+                    </a>
+                </div>
+                <div className="col-xs-6 col-sm-4 col-md-2">
+                    <a className="social-link-item">
+                        <TwitterShareButton url={currentLocation}>
+                            <span className="icon icon-twitter"></span>
+                            <span className="social-link-text">Twitter</span>
+                        </TwitterShareButton>
+                    </a>
+                </div>
+                <div className="col-xs-6 col-sm-4 col-md-2">
+                    <a className="social-link-item">
+                        <TelegramShareButton url={currentLocation}>
+                            <span className="icon icon-telegram"></span>
+                            <span className="social-link-text">Telegram</span>
+                        </TelegramShareButton>
+                    </a>
+                </div>
+                <div className="col-xs-6 col-sm-4 col-md-2">
+                    <a className="social-link-item">
+                        <span className="icon icon-wechat"></span>
+                        <span className="social-link-text">Wechat</span>
+                    </a>
+                </div>
+                <div className="col-xs-6 col-sm-4 col-md-2">
+                    <a className="social-link-item">
+                        <span className="icon icon-discord"></span>
+                        <span className="social-link-text">Weibo</span>
+                    </a>
+                </div>
+
+            </div>
         } else {
-            socialLinkClass = 'row social-link social-link-dark'
-        }
-        return (
-            <div className={socialLinkClass}>
+            ShareBlock = <div className='row social-link social-link-dark'>
                 <div className="col-xs-6 col-sm-4 col-md-2">
                     <a href="https://github.com/BitPortal" className="social-link-item">
                         <span className="icon icon-github"></span>
@@ -43,7 +80,8 @@ class ShareGroup extends React.Component {
                     </a>
                 </div>
             </div>
-        )
+        }
+        return ShareBlock
     }
 }
 
