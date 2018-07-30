@@ -1,5 +1,6 @@
 import React from 'react'
 import {TelegramShareButton, TwitterShareButton, FacebookShareButton} from 'react-share'
+import ChinaShare from 'social-share-react'
 import './style.less'
 
 class ShareGroup extends React.Component {
@@ -11,7 +12,7 @@ class ShareGroup extends React.Component {
             ShareBlock = <div className='row social-link social-link-gradient'>
                 <div className="col-xs-6 col-sm-4 col-md-2">
                     <a className="social-link-item">
-                        <FacebookShareButton>
+                        <FacebookShareButton url={currentLocation}>
                             <span className="icon icon-github"></span>
                             <span className="social-link-text">Facebook</span>
                         </FacebookShareButton>
@@ -33,19 +34,22 @@ class ShareGroup extends React.Component {
                         </TelegramShareButton>
                     </a>
                 </div>
-                <div className="col-xs-6 col-sm-4 col-md-2">
-                    <a className="social-link-item">
-                        <span className="icon icon-wechat"></span>
-                        <span className="social-link-text">Wechat</span>
-                    </a>
+                <div className='col-xs-6 col-sm-4 col-md-2'>
+                    <ChinaShare url={currentLocation} initialized={false} sites={['wechat']}>
+                        <a href="#" key='wechat' className='social-link-item'>
+                            <span className="icon icon-wechat"></span>
+                            <span className="social-link-text">Wechat</span>
+                        </a>
+                    </ChinaShare>
                 </div>
-                <div className="col-xs-6 col-sm-4 col-md-2">
-                    <a className="social-link-item">
-                        <span className="icon icon-discord"></span>
-                        <span className="social-link-text">Weibo</span>
-                    </a>
+                <div className='col-xs-6 col-sm-4 col-md-2'>
+                    <ChinaShare url={currentLocation} sites={['weibo']}>
+                        <a href="#" key='weibo' className='social-link-item'>
+                            <span className="icon icon-weibo"></span>
+                            <span className="social-link-text">Weibo</span>
+                        </a>
+                    </ChinaShare>
                 </div>
-
             </div>
         } else {
             ShareBlock = <div className='row social-link social-link-dark'>
