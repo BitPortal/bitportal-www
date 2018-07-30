@@ -19,7 +19,7 @@ class ShareGroup extends React.Component {
                 <div className="col-xs-6 col-sm-4 col-md-2">
                     <a className="social-link-item">
                         <FacebookShareButton url={currentLocation}>
-                            <span className="icon icon-github"></span>
+                            <span className="icon icon-facebook"></span>
                             <span className="social-link-text">Facebook</span>
                         </FacebookShareButton>
                     </a>
