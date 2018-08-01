@@ -6,9 +6,9 @@ import './style.less'
 class ShareGroup extends React.Component {
     componentDidMount () {
         //add text for weibo and wechat
-        let weiboText = document.createElement('span')
-        weiboText.innerHTML = 'Weibo'
-        document.getElementsByClassName('icon-wechat')[0].parentNode.appendChild(weiboText)
+        // let weiboText = document.createElement('span')
+        // weiboText.innerHTML = 'Weibo'
+        // document.getElementsByClassName('icon-wechat')[0].parentNode.appendChild(weiboText)
     }
     render() {
         let socialLinkType = this.props.linkType,
