@@ -10,7 +10,7 @@ class SectionSubscribe extends React.Component {
             <section className='section-wrap section-subscribe-partners'>
                 <div className="container">
                     <Fade bottom>
-                        <a className="section-subscribe-wrapper" name="subscribe">
+                        <a className="section-subscribe-wrapper">
                             <div className="section-subscribe">
                                 <h2 className="section-title title-features"><FormattedMessage id="subscribe.title"/>
                                 </h2>
@@ -29,22 +29,22 @@ class SectionSubscribe extends React.Component {
                             <h2 className='section-title title-features'><FormattedMessage id="partners.title"/></h2>
                             <div className="row">
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/1.png' className="partner-item-1"/>
+                                    <img src='/static/partners/1.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/2.png' className="partner-item-2"/>
+                                    <img src='/static/partners/2.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/4.png' className="partner-item-4"/>
+                                    <img src='/static/partners/3.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/5.png' className="partner-item-5"/>
+                                    <img src='/static/partners/4.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/6.png' className="partner-item-6"/>
+                                    <img src='/static/partners/5.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/7.png' className="partner-item-7"/>
+                                    <img src='/static/partners/6.png'/>
                                 </div>
                             </div>
                         </div>

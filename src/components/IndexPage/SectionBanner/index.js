@@ -49,12 +49,12 @@ class SectionBanner extends React.Component {
                                     <img className='android-download' src='/static/android-download.png'/>
                                 </a>
                             </div>
-                            <a href="#subscribe">
-                                <button className="page-banner-subscribe">
-                                    <span className="icon icon-pin"/>
-                                    <FormattedMessage id="subscribe"/>
-                                </button>
-                            </a>
+                            {/*<a href="#subscribe">*/}
+                                {/*<button className="page-banner-subscribe">*/}
+                                    {/*<span className="icon icon-pin"/>*/}
+                                    {/*<FormattedMessage id="subscribe"/>*/}
+                                {/*</button>*/}
+                            {/*</a>*/}
                         </div>
                     </Fade>
                 </div>
