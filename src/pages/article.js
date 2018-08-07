@@ -17,6 +17,18 @@ class ArticlePage extends React.Component {
     render() {
         let updatedAt = new Date(this.data.strapiArticle.updatedAt)
         let articleUpdatedAt = updatedAt.toDateString()
+        let isMobile = typeof window !== 'undefined' && window.screen.width <= 768 ;
+        const ArticleUserInfo = (<div className="col-xs-12 col-sm-2 article-user-info">
+            <div className="article-avatar">
+                <img src={this.data.strapiArticle.author.avatar_url}/>
+            </div>
+            <div className="article-username">
+                {this.data.strapiArticle.author.name}
+            </div>
+            <div className="article-updated-at">
+                <span className="icon icon-time"> </span> {articleUpdatedAt}
+            </div>
+        </div>)
         return (
             <Layout>
                 <div className="article-page">
@@ -33,26 +45,16 @@ class ArticlePage extends React.Component {
                         </div>
                         <div className="article-page-wrap">
                             <div className="row">
-                                <div className="col-sm-2">
-                                    <div className="article-avatar">
-                                        <img src={this.data.strapiArticle.author.avatar_url}/>
-                                    </div>
-                                    <div className="article-username">
-                                        {this.data.strapiArticle.author.name}
-                                    </div>
-                                    <div className="article-updated-at">
-                                        <span className="icon icon-time"> </span> {articleUpdatedAt}
-                                    </div>
-                                </div>
-                                <div className="col-sm-10">
+                                {isMobile || ArticleUserInfo}
+                                <div className="col-xs-12 col-sm-10">
                                     <div className="article-tag">#{this.data.strapiArticle.tag}</div>
                                     <h1 className="article-title">{this.data.strapiArticle.title}</h1>
                                     <div className="article-title-divider"></div>
                                     <div className="article-content">
                                         <Markdown source={this.data.strapiArticle.content}/>
                                     </div>
-
                                 </div>
+                                {isMobile && ArticleUserInfo}
                             </div>
                             <div className="row article-share-group">
                                 <div className="col-sm-10 col-sm-offset-2">
@@ -83,6 +85,7 @@ export const query = graphql`
         strapiArticle(id: {eq: $id}) {
             title
             content
+            customized_url
             author {
                 id
                 name

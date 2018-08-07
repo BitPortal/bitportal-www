@@ -12,14 +12,9 @@ class ArticleItem extends React.Component {
 
     render() {
         //conditionally render article image and tags
-        let articleImg = '',
-            articleTag = '';
-        if (this.props.articleData.node.img_url) {
-            articleImg = <img className="article-img" src={this.props.articleData.node.img_url}/>
-        }
-        if (this.props.articleData.node.tag) {
-            articleTag = <div className="article-tag">{this.props.articleData.node.tag}</div>
-        }
+        let articleTag = this.props.articleData.node.tag ?  <div className="article-tag">{this.props.articleData.node.tag}</div> : '',
+            articlePath = this.props.articleData.node.customized_url ? this.props.articleData.node.customized_url : this.props.articleData.node.id,
+            articleImg = this.props.articleData.node.img_url ? <img className="article-img" src={this.props.articleData.node.img_url}/> : ''
         return (
             <div className="col-sm-3">
                 <div className="article-item">
@@ -30,11 +25,11 @@ class ArticleItem extends React.Component {
                         <div className="article-content">
                             {this.props.articleData.node.content}
                         </div>
-                        <Link to={`/blog/${this.props.articleData.node.id}`}>
+                        <Link to={`/blog/${articlePath}`}>
                             <button className="article-btn"><FormattedMessage id="viewMore"/></button>
                         </Link>
                     </div>
-                    <div className="article-shadow"></div>
+                    <div className="article-shadow"/>
                 </div>
             </div>
         )
