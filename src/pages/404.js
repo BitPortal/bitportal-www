@@ -7,17 +7,14 @@ import '../styles/pages/404.less'
 class NotFoundPage extends React.Component{
     constructor (props) {
         super(props)
-        this.state = {
-            pageStyles: {}
-        }
-    }
-    componentWillMount () {
+
         let screenHeight = typeof window !== 'undefined' ? window.screen.availHeight : '100%';
-        this.setState({
-            pageStyles : {
+
+        this.state = {
+            pageStyles: {
                 minHeight: screenHeight ? (screenHeight - 380) : '100%'
             }
-        })
+        }
     }
     render () {
         return (
