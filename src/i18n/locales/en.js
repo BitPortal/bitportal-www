@@ -42,5 +42,7 @@ export default {
     'partners.title': 'Partners',
     'share.shareTo': 'Share to',
     'notFound.title': 'Not Found',
-    'notFound.content': 'The page you requested could not be found'
+    'notFound.content': 'The page you requested could not be found',
+    'serverError.title': 'Internal Server Error',
+    'serverError.content': 'Something wrong happened to the server'
 }

@@ -42,5 +42,7 @@ export default {
     'partners.title': '合作伙伴',
     'share.shareTo': '分享到',
     'notFound.title': '404错误',
-    'notFound.content': '未找到您请求的页面'
+    'notFound.content': '未找到您请求的页面',
+    'serverError.title': '内部服务器错误',
+    'serverError.content': '服务器开了个小差'
 }

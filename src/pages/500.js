@@ -2,9 +2,9 @@ import React from 'react'
 import Layout from '../components/Layout'
 import {withIntl} from '../i18n'
 import {FormattedMessage} from 'react-intl'
-import '../styles/pages/404.less'
+import '../styles/pages/500.less'
 
-class NotFoundPage extends React.Component{
+class ServerErrorPage extends React.Component{
     constructor (props) {
         super(props)
         this.state = {
@@ -22,10 +22,10 @@ class NotFoundPage extends React.Component{
     render () {
         return (
             <Layout>
-                <div className="not-found-page" style={this.state.pageStyles}>
+                <div className="server-error-page" style={this.state.pageStyles}>
                     <div className="container">
-                        <h1><FormattedMessage id="notFound.title"/></h1>
-                        <p><FormattedMessage id="notFound.content"/></p>
+                        <h1><FormattedMessage id="serverError.title"/></h1>
+                        <p><FormattedMessage id="serverError.content"/></p>
                     </div>
                 </div>
             </Layout>
@@ -33,4 +33,4 @@ class NotFoundPage extends React.Component{
     }
 }
 
-export default withIntl(NotFoundPage)
+export default withIntl(ServerErrorPage)
