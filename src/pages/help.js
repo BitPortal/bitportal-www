@@ -9,7 +9,6 @@ class HelpPage extends React.Component {
         super(props)
         let initQuestionsData = this.initQuestions(data)
         let webviewMode = this.judgeWebviewMode()
-        console.log(webviewMode)
         this.filtQuestions = this.filtQuestions.bind(this)
 
         this.state = {

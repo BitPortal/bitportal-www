@@ -12,6 +12,9 @@ class ArticlePage extends React.Component {
     constructor({props, data}) {
         super(props)
         this.data = data
+        this.state = {
+            webview: typeof location !== 'undefined' && location.href.indexOf('webview=true') > -1
+        }
     }
 
     render() {
@@ -31,7 +34,7 @@ class ArticlePage extends React.Component {
         </div>)
         return (
             <Layout>
-                <div className="article-page">
+                <div className={this.state.webview ? 'article-page webview' : 'article-page'}>
                     <SectionBanner hideDetail={true}/>
                     <div className="container">
                         <div className="bread-crumb">
