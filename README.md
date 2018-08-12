@@ -21,8 +21,6 @@ gatsby develop
 
 ## Build
 
-
-
 ```sh
 gatsby build
 ```
