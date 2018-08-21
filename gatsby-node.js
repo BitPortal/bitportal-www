@@ -44,7 +44,7 @@ exports.createPages = ({boundActionCreators, graphql, page}) => {
             let articlePath = node.customized_url ? node.customized_url : node.id;
             languages.forEach(({value}) => {
                 createPage({
-                    path: `/${value}/blog/${articlePath}`,
+                    path: `${value === 'en' ? '' : '/' + value}/blog/${articlePath}`,
                     component: path.resolve('src/pages/article.js'),
                     context: {
                         id: node.id,
@@ -61,7 +61,7 @@ exports.createPages = ({boundActionCreators, graphql, page}) => {
         result.data.allStrapiQuestion.edges.forEach(({node}) => {
             languages.forEach(({value}) => {
                 createPage({
-                    path: `/${value}/question/${node.id}`,
+                    path: `${value === 'en' ? '' : '/' + value}/question/${node.id}`,
                     component: path.resolve('src/pages/question.js'),
                     context: {
                         id: node.id,
@@ -105,7 +105,7 @@ exports.onCreatePage = ({page, boundActionCreators}) => {
             const localePage = {
                 ...page,
                 originalPath: page.path,
-                path: `/${value}${page.path}`,
+                path: `${value === 'en' ? '' : '/' + value}${page.path}`,
                 context: {
                     languages,
                     locale: value,

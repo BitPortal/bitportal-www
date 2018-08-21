@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 
 const I18nLink = ({ to, children, ...rest }, { language }) => {
     const { locale } = language
-    const toWithLang = locale ? `/${language.locale}${to}` : `${to}`
+    const toWithLang = locale ? `${language.locale === 'en' ? '' : '/' + language.locale}${to}` : `${to}`
     return (
         <Link to={toWithLang} {...rest}>
             {children}

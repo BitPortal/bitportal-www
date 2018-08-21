@@ -34,7 +34,7 @@ class Header extends React.Component {
             currentLanguage: lang === 'en' ? 'English' : '简体中文'
         })
         localStorage.setItem('language', lang)
-        window.location.href= `/${lang}${originalPath}`
+        window.location.href= `${lang === 'en' ? '' : '/' + lang}${originalPath}`
     }
 
     toggleLanguageMenu() {
