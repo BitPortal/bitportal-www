@@ -102,11 +102,19 @@
     }
   }
   &.webview{
+    &>.container{
+      padding: 0;
+    }
     .section-banner, .bread-crumb{
       display: none;
     }
     .article-page-wrap{
-      margin: 32px auto;
+      border-radius: 0;
+      padding: 40px 20px;
+      //margin: 32px auto;
+    }
+    .article-tag{
+      display: none;
     }
   }
 }

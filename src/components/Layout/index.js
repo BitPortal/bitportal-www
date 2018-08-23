@@ -39,7 +39,7 @@ class Layout extends React.Component {
     render() {
 
         return (
-            <div className="index-root">
+            <div className={(this.state.webview === true ? 'webview-page' : null) + ' index-root'}>
                 <Helmet>
                     <title>BitPortal - The Portal of the Internet of value</title>
                     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
