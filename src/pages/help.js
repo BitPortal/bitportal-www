@@ -84,7 +84,7 @@ class HelpPage extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="help-page" style={{paddingBottom: '54px'}}>
+                <div className="help-page">
                     <PageBanner pageTitle={'nav.helpCenter'}/>
                     <div className="container">
                         <div className="help-content-wrap">
