@@ -65,14 +65,7 @@ class ArticlePage extends React.Component {
                                     <ShareGroup linkType={'share'}/>
                                 </div>
                             </div>
-                            <div className="article-divider"></div>
-                            {/* Hide Article Comment temporarily */}
-                            {/*<div className="row">*/}
-                            {/*<div className="col-sm-10 col-sm-offset-2">*/}
-                            {/*<ArticleComment/>*/}
-                            {/*</div>*/}
-                            {/*</div>*/}
-                            {/*<p>By <Link to={`/authors/${data.strapiArticle.author.id}`}>{data.strapiArticle.author.username}</Link></p>*/}
+                            {/*<div className="article-divider"></div>*/}
                         </div>
                     </div>
                 </div>
