@@ -3,7 +3,7 @@ export default {
     'title.index': '币通 - 去往数字资产世界的传送门',
     'nav.home': '首页',
     'nav.blog': '博客',
-    'nav.tos': '使用条款',
+    'nav.tos': '服务协议',
     'nav.releaseNotes': '更新日志',
     'nav.helpCenter': '帮助中心',
     'banner.title1': '币通',

@@ -10,31 +10,17 @@ class Header extends React.Component {
     }
     constructor(props) {
         super(props)
-        this.switchLanguage = this.switchLanguage.bind(this)
+        this.setLanguage = this.setLanguage.bind(this)
         this.toggleLanguageMenu = this.toggleLanguageMenu.bind(this)
         this.toggleNavMenu = this.toggleNavMenu.bind(this)
-        let initLanguage = ''
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('language') !== ''){
-            initLanguage = localStorage.getItem('language')
-        }else if (typeof window !== 'undefined') {
-            initLanguage = (navigator.language || navigator.browserLanguage).slice(0, 2)
-        }else {
-            initLanguage = 'en'
-        }
         this.state = {
-            language: initLanguage,
-            currentLanguage: initLanguage === 'en' ? 'English' : '简体中文'
+            currentLanguage: this.props.language === 'en' ? 'English' : '简体中文'
         }
+
     }
 
-    switchLanguage(lang, event) {
-        const originalPath = this.context.language.originalPath || this.context.originalPath || '/'
-        this.setState({
-            language: lang,
-            currentLanguage: lang === 'en' ? 'English' : '简体中文'
-        })
-        localStorage.setItem('language', lang)
-        window.location.href= `${lang === 'en' ? '' : '/' + lang}${originalPath}`
+    setLanguage(lang) {
+        this.props.setLanguage(lang);
     }
 
     toggleLanguageMenu() {
@@ -57,17 +43,13 @@ class Header extends React.Component {
             headerNav.style.display = 'none'
         }
     }
-    //
-    // hideNavMenu () {
-    //     document.getElementsByClassName('header-nav')[0].style.display = 'none'
-    // }
 
     render() {
         let languageItem = ''
-        if (this.state.language === 'en') {
-            languageItem = <li onClick={this.switchLanguage.bind(this, 'zh')}>简体中文</li>
+        if (this.props.language === 'en') {
+            languageItem = <li onClick={this.setLanguage.bind(this, 'zh')}>简体中文</li>
         } else {
-            languageItem = <li onClick={this.switchLanguage.bind(this, 'en')}>English</li>
+            languageItem = <li onClick={this.setLanguage.bind(this, 'en')}>English</li>
         }
         return (
             <div className='container'>
@@ -96,13 +78,3 @@ class Header extends React.Component {
 }
 
 export default Header
-//
-// export const query = graphql`
-//   query SiteTitleQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `

@@ -18,16 +18,36 @@ import MobileBlocks from '../IndexPage/MobileBlocks'
 // config({ssrFadeout: true})
 
 class Layout extends React.Component {
+    static contextTypes = {
+        language: PropTypes.object
+    }
     constructor({props, children, data}) {
         super(props)
         this.data = data
         this.children = children
+        this.setLanguage = this.setLanguage.bind(this);
         this.state = {
-            webview: false
+            webview: false,
+            language: ''
         }
     }
 
+
     componentWillMount() {
+        //set global language
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('language')){
+            this.state.language = localStorage.getItem('language')
+        }else if (typeof window !== 'undefined') {
+            this.state.language = (navigator.language || navigator.browserLanguage).slice(0, 2)
+        }else {
+            this.state.language = 'en'
+        }
+        //
+        // if(this.state.language !== this.context.language.locale){
+        //     console.log(789)
+        //     this.setLanguage(this.state.language)
+        // }
+
         //webview mode, will hide header and footer
         if(typeof location !== 'undefined' && location.href.indexOf('webview=true') !== -1){
             this.setState({
@@ -36,8 +56,17 @@ class Layout extends React.Component {
         }
     }
 
-    render() {
+    setLanguage(lang) {
+        const originalPath = this.context.language.originalPath || this.context.originalPath || '/'
+        this.setState({
+            language: lang,
+        })
+        localStorage.setItem('language', lang)
+        window.location.href= `${lang === 'en' ? '' : '/' + lang}${originalPath}`
+    }
 
+    render() {
+        console.log(888)
         return (
             <div className={(this.state.webview === true ? 'webview-page' : null) + ' index-root'}>
                 <Helmet>
@@ -66,7 +95,7 @@ class Layout extends React.Component {
                     <meta property="og:url" content="https://www.bitportal.io/"/>
                     <meta property="og:site_name" content="BitPortal'"/>
                 </Helmet>
-                {this.state.webview || <Header/>}
+                {this.state.webview || <Header language={this.state.language} setLanguage={this.setLanguage}/>}
                 <div>
                     {this.props.children}
                 </div>

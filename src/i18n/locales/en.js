@@ -3,7 +3,7 @@ export default {
     'title.index': 'BitPortal - The Portal of the Internet of Value',
     'nav.home': 'Home',
     'nav.blog': 'Blog',
-    'nav.tos': 'Term of Service',
+    'nav.tos': 'Terms of Service',
     'nav.releaseNotes': 'Release Notes',
     'nav.helpCenter': 'Help Center',
     'banner.title1': 'The World’s Trusted Portal',
