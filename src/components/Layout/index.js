@@ -35,7 +35,9 @@ class Layout extends React.Component {
 
     componentWillMount() {
         //set global language
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('language')){
+        if(this.context.language.locale){
+            this.state.language = this.context.language.locale;
+        }else if (typeof localStorage !== 'undefined' && localStorage.getItem('language')){
             this.state.language = localStorage.getItem('language')
         }else if (typeof window !== 'undefined') {
             this.state.language = (navigator.language || navigator.browserLanguage).slice(0, 2)
