@@ -14,11 +14,11 @@ class ReleaseNotePage extends React.Component {
                                         <p className="lead"><strong>V0.2.0</strong></p>
                                         相对较大的版本更新，完善诸多功能。
                                         <ul>
-                                            <li>1. 优化导入账户流程</li>
-                                            <li>2. 修复和完善Discovery页面</li>
-                                            <li>3. 增加帮助中心</li>
-                                            <li>4. 添加新建账户功能（通过邀请码）</li>
-                                            <li>5. 修复bug和提升兼容性</li>
+                                            <li>* 优化导入账户流程</li>
+                                            <li>* 修复和完善Discovery页面</li>
+                                            <li>* 增加帮助中心</li>
+                                            <li>* 添加新建账户功能（通过邀请码）</li>
+                                            <li>* 修复bug和提升兼容性</li>
                                         </ul>
                                     </div>
 
@@ -26,19 +26,19 @@ class ReleaseNotePage extends React.Component {
                                         <p className="lead"><strong>v0.1.5
                                         </strong></p>
                                         <ul>
-                                            <li>1. 增加转账功能</li>
-                                            <li>2. 增加历史记录</li>
-                                            <li>3. 修复细节</li>
+                                            <li>* 增加转账功能</li>
+                                            <li>* 增加历史记录</li>
+                                            <li>* 修复细节</li>
                                         </ul>
                                     </div>
 
                                     <div>
                                         <p className="lead"><strong>V0.1.4</strong></p>
                                         <ul>
-                                            <li>1. 更新了投票界面，增加节点详情</li>
-                                            <li>2. 用户界面调整，加上诸多优化</li>
-                                            <li>3. 添加实时内存价格</li>
-                                            <li>4. bug修复等</li>
+                                            <li>* 更新了投票界面，增加节点详情</li>
+                                            <li>* 用户界面调整，加上诸多优化</li>
+                                            <li>* 添加实时内存价格</li>
+                                            <li>* bug修复等</li>
                                         </ul>
                                     </div>
 
