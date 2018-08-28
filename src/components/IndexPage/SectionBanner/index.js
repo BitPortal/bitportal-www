@@ -40,12 +40,12 @@ class SectionBanner extends React.Component {
                         </ul>
                         <div className='page-banner-download-wrap'>
                             <div className='page-banner-download-ios'>
-                                <a href="https://www.pgyer.com/bitportal">
+                                <a href="https://fir.im/bitportal">
                                     <img className='ios-download' src='/static/ios-download.png'/>
                                 </a>
                             </div>
                             <div className="page-banner-download-android">
-                                <a href="https://www.pgyer.com/bitportal">
+                                <a href="https://fir.im/bitportalapk">
                                     <img className='android-download' src='/static/android-download.png'/>
                                 </a>
                             </div>
