@@ -56,7 +56,7 @@ class Layout extends React.Component {
     render() {
         return (
             <div className={(this.state.webview === true ? 'webview-page' : null) + ' index-root'}>
-                <Helmet>
+                <Helmet htmlAttributes={{"lang": this.state.language}}>
                     <title>BitPortal - The Portal of the Internet of value</title>
                     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
                     <link rel="shortcut icon" href="/static/favicon.ico"/>
