@@ -59,6 +59,8 @@ class Layout extends React.Component {
                 <Helmet htmlAttributes={{"lang": this.state.language}}>
                     <title>BitPortal - The Portal of the Internet of value</title>
                     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+                    <link rel="alternate" href="https://www.bitportal.io" hreflang="en"/>
+                    <link rel="alternate" href="https://www.bitportal.io/zh/" hreflang="zh"/>
                     <link rel="shortcut icon" href="/static/favicon.ico"/>
                     <link rel="canonical" href="https://www.bitportal.io/"/>
                     <meta name="baidu-site-verification" content="BYgg29bFbl"/>
