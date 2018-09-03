@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import {injectIntl} from 'react-intl'
-import config from 'react-reveal/globals'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../styles/icons.less'
@@ -32,23 +31,10 @@ class Layout extends React.Component {
         }
     }
 
-
     componentWillMount() {
-        //set global language
-        if(this.context.language.locale){
-            this.state.language = this.context.language.locale;
-        }else if (typeof localStorage !== 'undefined' && localStorage.getItem('language')){
-            this.state.language = localStorage.getItem('language')
-        }else if (typeof window !== 'undefined') {
-            this.state.language = (navigator.language || navigator.browserLanguage).slice(0, 2)
-        }else {
-            this.state.language = 'en'
-        }
-        //
-        // if(this.state.language !== this.context.language.locale){
-        //     console.log(789)
-        //     this.setLanguage(this.state.language)
-        // }
+        this.setState({
+            language: this.context.language.locale
+        });
 
         //webview mode, will hide header and footer
         if(typeof location !== 'undefined' && location.href.indexOf('webview=true') !== -1){
@@ -68,7 +54,6 @@ class Layout extends React.Component {
     }
 
     render() {
-        console.log(888)
         return (
             <div className={(this.state.webview === true ? 'webview-page' : null) + ' index-root'}>
                 <Helmet>

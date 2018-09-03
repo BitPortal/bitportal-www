@@ -6,7 +6,6 @@ import { languages } from './index'
 class Redirect extends PureComponent {
     constructor(props) {
         super(props)
-
         const langKeys = languages.map(language => language.value)
         const { pathname } = props.location
 
@@ -19,6 +18,7 @@ class Redirect extends PureComponent {
                     fallback: 'zh',
                 })
 
+            console.log('77', detected)
             const newUrl = withPrefix(`${detected === 'en' ? '' : '/'+detected}${pathname}`)
             window.localStorage.setItem('language', detected)
             window.location.replace(newUrl)

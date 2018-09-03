@@ -5,3 +5,20 @@
  */
 
  // You can delete this file if you're not using it
+
+exports.onClientEntry = () => {
+    let language = null;
+    if(typeof window !== 'undefined'){
+        let originalPath = location.pathname;
+        if (localStorage.getItem('language')){
+            language = localStorage.getItem('language')
+        }else {
+            language = (navigator.language || navigator.browserLanguage).slice(0, 2) || 'en'
+        }
+        localStorage.setItem('language', language)
+        const urlLanguage = location.href.indexOf('/zh') > -1 ? 'zh' : 'en'
+        if(urlLanguage !== language){
+            location.href = `${language === 'en' ? '/' : '/zh' + originalPath}`
+        }
+    }
+}

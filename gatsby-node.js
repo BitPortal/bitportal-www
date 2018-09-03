@@ -43,7 +43,6 @@ exports.createPages = ({boundActionCreators, graphql, page}) => {
         result.data.allStrapiArticle.edges.forEach(({node}) => {
             let articlePath = node.customized_url ? node.customized_url : node.id;
             languages.forEach(({value}) => {
-                console.log(value)
                 createPage({
                     path: `${value === 'en' ? '' : '/' + value}/blog/${articlePath}`,
                     component: path.resolve('src/pages/article.js'),
@@ -110,7 +109,7 @@ exports.onCreatePage = ({page, boundActionCreators}) => {
                     languages,
                     locale: value,
                     routed: true,
-                    originalPath: page.path,
+                    originalPath: page.path
                 },
             }
             createPage(localePage)

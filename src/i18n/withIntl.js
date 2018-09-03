@@ -33,6 +33,7 @@ export default ComposedComponent => {
         }
 
         render() {
+
             const { language } = this.state
             const locale = language.locale || 'zh'
             const messages = require(`./locales/${locale}.js`) // eslint-disable-line

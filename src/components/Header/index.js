@@ -16,7 +16,6 @@ class Header extends React.Component {
         this.state = {
             currentLanguage: this.props.language === 'en' ? 'English' : '简体中文'
         }
-
     }
 
     setLanguage(lang) {
