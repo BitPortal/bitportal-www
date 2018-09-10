@@ -25,7 +25,7 @@ export default {
     'features.item3Text': '基于React Native开发，为您提供iOS和Android客户端',
     'assetsManagement.title': '专业的EOS的资产管理',
     'assetsManagement.text1': '币通支持基于EOS的账户、资产管理，及超级节点投票',
-    'assetsManagement.text2': '币通不会保存您的私钥，由您的资产由您掌控',
+    'assetsManagement.text2': '币通不会保存您的私钥，您的资产由您掌控',
     'assetsManagement.text3': '币通使用多层嵌套的安全措施，为您的资产保驾护航',
     'marketInformation.title': '实用的市场数据',
     'marketInformation.text1': '实时的交易数据，让您把握每次投资机遇',
