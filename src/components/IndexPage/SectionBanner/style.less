@@ -1,3 +1,5 @@
+@import '../../../styles/mixins.less';
+
 .section-banner {
   color: #fff;
   &.hideDetail {
@@ -34,45 +36,39 @@
   .page-banner-download-wrap {
     margin-top: 35px;
   }
-  .page-banner-download-ios {
-    width: 135px;
-    height: 40px;
+  .page-banner-download {
+    border-radius: 4px;
+    .blue-white-gradient();
+    width: 18%;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 16px;
+    a:hover {
+      color: #fff !important;
+    }
   }
+}
 
-  //.page-banner-subscribe{
-  //  display: inline-block;
-  //  height: 40px;
-  //  width: 135px;
-  //  border-radius: 5px;
-  //  border: none;
-  //  background: rgba(150, 150, 150, .5);
-  //  &:hover{
-  //    background: rgba(120, 120, 120, .5);
-  //  }
-  //}
-
-  .ios-download {
-    width: 100%;
+@media screen and (max-width: 992px) {
+  .section-banner {
+    .page-banner-download {
+      width: 30%;
+    }
   }
-  .page-banner-download-android {
-    width: 135px;
-    height: 40px;
-    display: inline-block;
-    margin-right: 20px;
-  }
-  .android-download {
-    width: 100%;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
   .section-banner {
     margin-top: 0;
+    margin-bottom: 44px;
     .page-banner-title {
+      margin-top: 88px;
       font-size: 24px;
+    }
+    .page-banner-download {
+      width: 100%;
     }
     &.hideDetail {
       .page-banner-text-wrap, .page-banner-download-wrap {
@@ -83,11 +79,8 @@
         margin-bottom: 48px;
       }
     }
-    .page-banner-download-ios {
-      margin-right: 10px;
+    .page-banner-download {
+      margin-bottom: 28px;
     }
-    //.page-banner-subscribe {
-    //  margin-top: 16px;
-    //}
   }
 }

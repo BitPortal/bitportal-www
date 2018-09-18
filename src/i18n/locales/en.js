@@ -11,6 +11,8 @@ export default {
     'banner.text1': 'A Wallet, Portfolio Manager and Exchange for the EOS Community',
     'banner.text2': 'Secure EOS Wallet, a better solution for your convenient usage of crypto wallet',
     'banner.text3': 'Decentralized Exchange based on Dexlize Protocol which will offer the best liquidity',
+    'banner.downloadIos': 'Download iOS',
+    'banner.downloadAndroid': 'Download Android',
     'viewMore': 'View More',
     'address': 'Shanghai Pudong New District',
     'comments': 'COMMENTS',

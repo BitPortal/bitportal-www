@@ -11,6 +11,8 @@ export default {
     'banner.text1': '实时市场数据与综合项目信息，专为数字资产投资者准备',
     'banner.text2': '安全可靠的EOS钱包，在提供便利的同时为您的资产保驾护航',
     'banner.text3': '内置基于Dexlize协议的去中心化交易所，为您提供优秀的资产流动性',
+    'banner.downloadIos': '下载 iOS 版',
+    'banner.downloadAndroid': '下载 Android 版',
     'viewMore': '查看更多',
     'address': '上海浦东新区',
     'comments': '评论',
