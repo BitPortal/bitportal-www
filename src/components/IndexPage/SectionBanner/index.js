@@ -39,18 +39,14 @@ class SectionBanner extends React.Component {
                             </li>
                         </ul>
                         <div className='page-banner-download-wrap'>
-                            <div className='page-banner-download'>
-                                <a href="https://fir.im/bitportal">
-                                    <span className="icon icon-ios"/>
-                                    <FormattedMessage id="banner.downloadIos"/>
-                                </a>
-                            </div>
-                            <div className="page-banner-download">
-                                <a href="https://fir.im/bitportalapk">
-                                    <span className="icon icon-android"/>
-                                    <FormattedMessage id="banner.downloadAndroid"/>
-                                </a>
-                            </div>
+                            <a href="https://fir.im/bitportal" className="banner-download">
+                                <span className="icon icon-ios"/>
+                                <FormattedMessage id="banner.downloadIos"/>
+                            </a>
+                            <a href="https://fir.im/bitportalapk" className="banner-download">
+                                <span className="icon icon-android"/>
+                                <FormattedMessage id="banner.downloadAndroid"/>
+                            </a>
                         </div>
                     </Fade>
                 </div>
