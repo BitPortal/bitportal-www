@@ -10,7 +10,7 @@ class SectionBanner extends React.Component {
 
     render() {
         return (
-            <section className={'section-wrap section-banner ' + this.props.hideDetail ? 'hideDetail' : ''}>
+            <section className={'section-wrap section-banner ' + (this.props.hideDetail ? 'hideDetail' : '')}>
                 <div className='container'>
                     <div className='page-banner-title'>
                         <FormattedMessage id='banner.title1'/><br/>
