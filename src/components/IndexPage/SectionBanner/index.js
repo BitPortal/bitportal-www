@@ -8,15 +8,9 @@ class SectionBanner extends React.Component {
         super(props)
     }
 
-    componentWillMount() {
-        if (this.props.hideDetail) {
-            document.getElementsByClassName('section-banner')[0].className += ' hideDetail';
-        }
-    }
-
     render() {
         return (
-            <section className='section-wrap section-banner'>
+            <section className={'section-wrap section-banner ' + this.props.hideDetail ? 'hideDetail' : ''}>
                 <div className='container'>
                     <div className='page-banner-title'>
                         <FormattedMessage id='banner.title1'/><br/>
