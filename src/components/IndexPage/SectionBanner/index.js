@@ -8,7 +8,7 @@ class SectionBanner extends React.Component {
         super(props)
     }
 
-    componentDidMount() {
+    componentWillMount() {
         if (this.props.hideDetail) {
             document.getElementsByClassName('section-banner')[0].className += ' hideDetail';
         }
