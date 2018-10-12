@@ -38,6 +38,11 @@ class BlogPage extends React.Component {
                                     </div>
                                 ))}
                             </div>
+                            <div className="blog-show-more">
+                                <button className='btn-show-more'>
+                                    <FormattedMessage id='showMore'/>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

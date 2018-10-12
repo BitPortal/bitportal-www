@@ -14,6 +14,7 @@ export default {
     'banner.downloadIos': '下载 iOS 版',
     'banner.downloadAndroid': '下载 Android 版',
     'viewMore': '查看更多',
+    'showMore': '展示更多',
     'address': '上海浦东新区',
     'comments': '评论',
     'comment.postHint': '留下你的评论',

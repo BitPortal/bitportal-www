@@ -14,6 +14,7 @@ export default {
     'banner.downloadIos': 'Download iOS',
     'banner.downloadAndroid': 'Download Android',
     'viewMore': 'View More',
+    'showMore': 'Show More',
     'address': 'Shanghai Pudong New District',
     'comments': 'COMMENTS',
     'comment.postHint': 'LEAVE A COMMENT',
