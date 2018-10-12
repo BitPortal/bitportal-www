@@ -29,43 +29,65 @@ class SectionSubscribe extends React.Component {
                             <h2 className='section-title title-features'><FormattedMessage id="partners.title"/></h2>
                             <div className="row">
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/1.png'/>
+                                    <a href="http://www.ratio.fund/" target="_blank">
+                                        <img src='/static/partners/1.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/2.png'/>
+                                    <a href="https://slowmist.io/" target="_blank">
+                                        <img src='/static/partners/2.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
                                     <img src='/static/partners/3.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/4.png'/>
+                                    <a href="https://www.ihuoqiu.com/" target="_blank">
+                                        <img src='/static/partners/4.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/5.png'/>
+                                    <a href="http://cointegra.io/" target="_blank">
+                                        <img src='/static/partners/5.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
                                     <img src='/static/partners/6.png'/>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/btccpool.png'/>
+                                    <a href="https://btccpooleos.com/" target="_blank">
+                                        <img src='/static/partners/btccpool.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/DappPub.png'/>
+                                    <a href="https://dapp.pub/" target="_blank">
+                                        <img src='/static/partners/DappPub.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/Dexlize.png'/>
+                                    <a href="https://www.dexlize.org/" target="_blank">
+                                        <img src='/static/partners/Dexlize.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/EOSCO.png'/>
+                                    <a href="http://eoseco.net/#" target="_blank">
+                                        <img src='/static/partners/EOSCO.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/EOSpark.png'/>
+                                    <a href="https://eospark.com/" target="_blank">
+                                        <img src='/static/partners/EOSpark.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/imeos.png'/>
+                                    <a href="https://imeos.one/" target="_blank">
+                                        <img src='/static/partners/imeos.png'/>
+                                    </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <img src='/static/partners/kyubey.png'/>
+                                    <a href="https://kyubey.network/" target="_blank">
+                                        <img src='/static/partners/kyubey.png'/>
+                                    </a>
                                 </div>
                             </div>
                         </div>
