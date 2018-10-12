@@ -33,8 +33,8 @@ class BlogPage extends React.Component {
                             </div>
                             <div className="blog-content">
                                 {this.data.allStrapiArticle.edges.map(document => (
-                                    <div className="row">
-                                        <ArticleItem articleData={document} key={document.node.id}/>
+                                    <div className="row" key={document.node.id}>
+                                        <ArticleItem articleData={document}/>
                                     </div>
                                 ))}
                             </div>

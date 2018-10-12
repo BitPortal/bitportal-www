@@ -17,23 +17,23 @@ class ArticleItem extends React.Component {
         let articlePath = this.props.articleData.node.customized_url ? this.props.articleData.node.customized_url : this.props.articleData.node.id;
         return (
             <div className="article-item">
-                <div className="col-sm-2">
+                <div className="col-sm-2 col-xs-12">
                     <div className="article-img">
-                        <Link target='_blank' to={`/blog/${articlePath}`}>
+                        <Link to={`/blog/${articlePath}`}>
                             {this.props.articleData.node.tag &&
                             <div className="article-tag">{this.props.articleData.node.tag}</div>}
                             {this.props.articleData.node.img_url && <img src={this.props.articleData.node.img_url}/>}
                         </Link>
                     </div>
                 </div>
-                <div className="col-sm-10" style={{height: '100%'}}>
-                    <div className="article-title"><Link target='_blank'
+                <div className="col-sm-10 col-xs-12" style={{height: '100%'}}>
+                    <div className="article-title"><Link
                         to={`/blog/${articlePath}`}>{this.props.articleData.node.title}</Link></div>
                     <div className="article-content">
                         {this.props.articleData.node.content}
                     </div>
                 </div>
-                <div className="col-sm-10 col-sm-offset-2">
+                <div className="col-sm-10 col-sm-offset-2 article-info">
                     <div className="article-author">
                         {this.props.articleData.node.author.name} · {moment(this.props.articleData.node.createdAt).locale('zh-cn').fromNow()}
                     </div>

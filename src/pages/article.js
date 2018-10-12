@@ -65,7 +65,6 @@ class ArticlePage extends React.Component {
                                     <ShareGroup linkType={'share'}/>
                                 </div>
                             </div>
-                            {/*<div className="article-divider"></div>*/}
                         </div>
                     </div>
                 </div>

@@ -1,23 +1,24 @@
 @import '../../../styles/mixins.less';
 
-.article-item{
+.article-item {
   border-radius: 5px;
   overflow: hidden;
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
-  .article-author{
+  .article-author {
     color: #9caeac;
     position: absolute;
     bottom: 0;
   }
-  .article-img{
+  .article-img {
     position: relative;
-    border-radius: 5px;
-    overflow: hidden;
+    img{
+      border-radius: 5px;
+    }
   }
-  .article-tag{
+  .article-tag {
     position: absolute;
     top: 8px;
     left: 8px;
@@ -30,17 +31,18 @@
     border-radius: 5px;
     .blue-white-gradient();
   }
-  .article-title{
+  .article-title {
     margin-bottom: 12px;
-    a{
+    a {
       color: #1f2126 !important;
       font-size: 20px;
     }
   }
-  .article-content{
+  .article-content {
     color: #9caeac;
+    margin-bottom: 24px;
   }
-  .article-btn{
+  .article-btn {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -55,8 +57,24 @@
     border-radius: 5px;
     z-index: 10;
     .blue-white-gradient();
-    &:focus{
+    &:focus {
       outline: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .article-item {
+    .article-img {
+      margin-bottom: 12px;
+    }
+    .article-title {
+    }
+    .article-info{
+      position: static;
+    }
+    .article-author{
+      margin-bottom: 12px;
     }
   }
 }
