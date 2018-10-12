@@ -46,6 +46,27 @@ class SectionSubscribe extends React.Component {
                                 <div className='col-md-2 col-xs-6 partner-item'>
                                     <img src='/static/partners/6.png'/>
                                 </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/btccpool.png'/>
+                                </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/DappPub.png'/>
+                                </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/Dexlize.png'/>
+                                </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/EOSCO.png'/>
+                                </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/EOSpark.png'/>
+                                </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/imeos.png'/>
+                                </div>
+                                <div className='col-md-2 col-xs-6 partner-item'>
+                                    <img src='/static/partners/kyubey.png'/>
+                                </div>
                             </div>
                         </div>
                     </Fade>

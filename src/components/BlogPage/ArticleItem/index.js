@@ -26,7 +26,7 @@ class ArticleItem extends React.Component {
                         </Link>
                     </div>
                 </div>
-                <div className="col-sm-10 col-xs-12" style={{height: '100%'}}>
+                <div className="col-sm-10 col-xs-12">
                     <div className="article-title"><Link
                         to={`/blog/${articlePath}`}>{this.props.articleData.node.title}</Link></div>
                     <div className="article-content">
