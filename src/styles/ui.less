@@ -30,7 +30,7 @@ img {
   margin-bottom: 0 !important;
 }
 
-:focus{
+:focus {
   outline: 0;
 }
 
@@ -38,11 +38,32 @@ img {
   display: none;
 }
 
+.bread-crumb {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  padding: 0 50px;
+  color: #4a4a4a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  .bread-crumb-link {
+    color: #4a4a4a !important;
+  }
+  .bread-crumb-title {
+    color: rgba(74, 74, 74, .3);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .section-title {
     font-size: 28px;
   }
-  .container{
+
+  .container {
     padding-left: 28px;
     padding-right: 28px;
   }

@@ -1,8 +1,9 @@
 import React from 'react'
 import BannerItem from '../components/BlogPage/BannerItem'
 import ArticleItem from '../components/BlogPage/ArticleItem'
-import SectionBanner from '../components/IndexPage/SectionBanner'
 import Layout from '../components/Layout'
+import {FormattedMessage} from 'react-intl'
+import '../styles/pages/blog.less'
 import {withIntl, Link} from '../i18n'
 
 class BlogPage extends React.Component {
@@ -14,28 +15,29 @@ class BlogPage extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="blog-page" style={{paddingBottom: '54px'}}>
-                    <SectionBanner hideDetail={true}/>
+                <div className="blog-page">
                     <div className="container">
-                        <div className="row">
-                            {this.data.allStrapiBanner.edges.map(document => (
-                                <BannerItem bannerData={document} key={document.node.id}/>
-                            ))}
+                        <div className="bread-crumb">
+                            <Link to="/" className="bread-crumb-link">
+                                <FormattedMessage id="nav.home"/>
+                            </Link>&nbsp;&nbsp;-&nbsp;&nbsp;
+                            <span className="bread-crumb-title">
+                                <FormattedMessage id="nav.blog"/>
+                            </span>
                         </div>
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            {this.data.allStrapiArticle.edges.map(document => (
-                                <ArticleItem articleData={document} key={document.node.id}/>
-                                //   <li key={document.node.id}>
-                                //   <h2>
-                                //     <Link to={`/${document.node.id}`}>{document.node.title}</Link>
-                                //   </h2>
-                                //   <p>
-                                //     {document.node.content}
-                                //   </p>
-                                // </li>
-                            ))}
+                        <div className='blog-wrap'>
+                            <div className="row blog-banner">
+                                {this.data.allStrapiBanner.edges.map(document => (
+                                    <BannerItem bannerData={document} key={document.node.id}/>
+                                ))}
+                            </div>
+                            <div className="blog-content">
+                                {this.data.allStrapiArticle.edges.map(document => (
+                                    <div className="row">
+                                        <ArticleItem articleData={document} key={document.node.id}/>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,6 +55,11 @@ export const pageQuery = graphql`
         node {
           id
           title
+          author{
+            name
+          }
+          updatedAt
+          createdAt
           content
           language
           img_url
