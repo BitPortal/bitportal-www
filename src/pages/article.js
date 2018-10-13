@@ -12,15 +12,30 @@ class ArticlePage extends React.Component {
     constructor({props, data}) {
         super(props)
         this.data = data
+        this.updateMode = this.updateMode.bind(this)
         this.state = {
-            webview: typeof location !== 'undefined' && location.href.indexOf('webview=true') > -1
+            webview: typeof location !== 'undefined' && location.href.indexOf('webview=true') > -1,
+            isMobile: typeof document !== 'undefined' && document.body.clientWidth <= 768
         }
+    }
+
+    componentDidMount(){
+        typeof window !== 'undefined' && window.addEventListener('resize', this.updateMode)
+    }
+
+    componentWillUnmount(){
+        typeof window !== 'undefined' && window.removeEventListener('resize', this.updateMode)
+    }
+
+    updateMode(){
+        this.setState({
+            isMobile: typeof document !== 'undefined' && document.body.clientWidth <= 768
+        })
     }
 
     render() {
         let updatedAt = new Date(this.data.strapiArticle.updatedAt)
         let articleUpdatedAt = updatedAt.toDateString()
-        let isMobile = typeof window !== 'undefined' && window.screen.width <= 768 ;
         const ArticleUserInfo = (<div className="col-xs-12 col-sm-2 article-user-info">
             <div className="article-avatar">
                 <img src={this.data.strapiArticle.author.avatar_url}/>
@@ -48,7 +63,7 @@ class ArticlePage extends React.Component {
                         </div>
                         <div className="article-page-wrap">
                             <div className="row">
-                                {isMobile || ArticleUserInfo}
+                                {this.state.isMobile || ArticleUserInfo}
                                 <div className="col-xs-12 col-sm-10">
                                     <div className="article-tag">#{this.data.strapiArticle.tag}</div>
                                     <h1 className="article-title">{this.data.strapiArticle.title}</h1>
@@ -57,7 +72,7 @@ class ArticlePage extends React.Component {
                                         <Markdown source={this.data.strapiArticle.content}/>
                                     </div>
                                 </div>
-                                {isMobile && ArticleUserInfo}
+                                {this.state.isMobile && ArticleUserInfo}
                             </div>
                             <div className="row article-share-group">
                                 <div className="col-sm-10 col-sm-offset-2">
