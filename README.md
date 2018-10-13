@@ -1,10 +1,16 @@
 # BitPortal Website
 
-## 修改 strapi 环境
+front end is based on gatsby
 
-在 gatsby-config.js 中进行配置，线上需连接 cms.bitportal.io 地址
+## Backend
 
-based on gatsby
+strapi headless cms
+
+## modify conntected strapi url
+
+config it in the  `gatsby-config.js`
+
+
 
 ## Install
 

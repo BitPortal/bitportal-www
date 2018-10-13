@@ -50,7 +50,6 @@ class ArticlePage extends React.Component {
         return (
             <Layout>
                 <div className={this.state.webview ? 'article-page webview' : 'article-page'}>
-                    <SectionBanner hideDetail={true}/>
                     <div className="container">
                         <div className="bread-crumb">
                             <Link to="/" className="bread-crumb-link">

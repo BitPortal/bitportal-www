@@ -15,7 +15,7 @@ export default {
     'banner.downloadAndroid': 'Download Android',
     'viewMore': 'View More',
     'showMore': 'Show More',
-    'address': 'Shanghai Pudong New District',
+    'address': 'Singapore',
     'comments': 'COMMENTS',
     'comment.postHint': 'LEAVE A COMMENT',
     'features.title': 'Features',
