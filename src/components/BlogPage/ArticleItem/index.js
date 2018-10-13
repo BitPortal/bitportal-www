@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.less'
 import moment from 'moment'
-import {FormattedMessage} from 'react-intl'
 import {Link} from '../../../i18n'
 
 class ArticleItem extends React.Component {
@@ -12,8 +11,6 @@ class ArticleItem extends React.Component {
     }
 
     render() {
-        console.log(this.props.articleData)
-        //conditionally render article image and tags
         let articlePath = this.props.articleData.node.customized_url ? this.props.articleData.node.customized_url : this.props.articleData.node.id;
         return (
             <div className="article-item">
