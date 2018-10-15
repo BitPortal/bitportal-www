@@ -34,7 +34,7 @@ class Footer extends React.Component {
                                 <ul className="footer-link-wrap">
                                     <li><a href="/"><FormattedMessage id="nav.home"/></a></li>
                                     <li><a href="/tos"><FormattedMessage id="nav.tos"/></a></li>
-                                    <li><a href="/release-notes"><FormattedMessage id="nav.releaseNotes"/></a></li>
+                                    <li><a href="https://bitportal.github.io/bitportal-release-notes/"><FormattedMessage id="nav.releaseNotes"/></a></li>
                                     <li><a href="/help"><FormattedMessage id="nav.helpCenter"/></a></li>
                                 </ul>
                             </div>
