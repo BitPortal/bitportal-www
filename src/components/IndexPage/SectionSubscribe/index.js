@@ -75,8 +75,8 @@ class SectionSubscribe extends React.Component {
                                     </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <a href="https://eospark.com/" target="_blank">
-                                        <img src='/static/partners/EOSpark.png'/>
+                                    <a href="https://spider.store/ranking/eos/hot" target="_blank">
+                                        <img src='/static/partners/SpiderStore.png'/>
                                     </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
