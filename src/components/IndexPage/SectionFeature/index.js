@@ -57,7 +57,7 @@ class SectionFeature extends React.Component {
                                     <FormattedMessage id="assetsManagement.text3"/>
                                 </div>
                             </div>
-                            <img src='/static/asset-phone.png'
+                            <img src='/static/phone-1.png'
                                  className='section-assets-img col-xs-12 col-md-7 pull-right'/>
                         </div>
                     </Fade>
@@ -72,8 +72,23 @@ class SectionFeature extends React.Component {
                                     <FormattedMessage id="marketInformation.text3"/>
                                 </div>
                             </div>
-                            <img src='/static/market-phone.png'
-                                 className='section-market-img col-xs-12 col-md-7 pull-left'/>
+                            <img src='/static/phone-2.png'
+                                 className='section-ecosystem-img col-xs-12 col-md-7 pull-left'/>
+                        </div>
+                    </Fade>
+                    <Fade bottom>
+                        <div className='section-ecosystem row'>
+                            <div className='section-ecosystem-text col-xs-12 col-md-5 pull-left'>
+                                <h2 className='section-title title-features'><FormattedMessage
+                                    id="ecosystem.title"/></h2>
+                                <div className='section-text text-features'>
+                                    <FormattedMessage id="ecosystem.text1"/><br/><br/>
+                                    <FormattedMessage id="ecosystem.text2"/><br/><br/>
+                                    <FormattedMessage id="ecosystem.text3"/>
+                                </div>
+                            </div>
+                            <img src='/static/phone-3.png'
+                                 className='section-market-img col-xs-12 col-md-7 pull-right'/>
                         </div>
                     </Fade>
                 </div>
