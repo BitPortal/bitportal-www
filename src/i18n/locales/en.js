@@ -6,6 +6,7 @@ export default {
     'nav.tos': 'Terms of Service',
     'nav.releaseNotes': 'Release Notes',
     'nav.helpCenter': 'Help Center',
+    'nav.dappForm': 'DApp List Application',
     'banner.title1': 'The World’s Trusted Portal',
     'banner.title2': 'To The Internet Of Value.',
     'banner.text1': 'A Wallet, Portfolio Manager and Exchange for the EOS Community',
