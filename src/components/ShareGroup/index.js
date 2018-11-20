@@ -72,12 +72,6 @@ class ShareGroup extends React.Component {
                     </a>
                 </div>
                 <div className="col-xs-6 col-sm-4 col-md-2">
-                    <a href="#" className="social-link-item">
-                        <span className="icon icon-wechat"></span>
-                        <span className="social-link-text">Wechat</span>
-                    </a>
-                </div>
-                <div className="col-xs-6 col-sm-4 col-md-2">
                     <a href="https://discordapp.com/invite/ZRUvfxV" className="social-link-item">
                         <span className="icon icon-discord"></span>
                         <span className="social-link-text">Discord</span>
