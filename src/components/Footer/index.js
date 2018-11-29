@@ -41,7 +41,8 @@ class Footer extends React.Component {
                             <div className="col-md-2 col-xs-6">
                                 <ul className="footer-link-wrap">
                                     <li><a href="/blog"><FormattedMessage id="nav.blog"/></a></li>
-                                    <li><a href="http://hk.mikecrm.com/jsGRD8h"><FormattedMessage id="nav.dappForm"/></a></li>
+                                    <li><a href="http://bitportal.mikecrm.com/3X3biAv"><FormattedMessage id="nav.dappForm"/></a></li>
+                                    <li><a href="http://bitportal.mikecrm.com/OCSv3Pm"><FormattedMessage id="nav.tokenForm"/></a></li>
                                 </ul>
                             </div>
                             <div className="footer-location">

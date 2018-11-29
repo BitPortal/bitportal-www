@@ -7,6 +7,7 @@ export default {
     'nav.releaseNotes': '更新日志',
     'nav.helpCenter': '帮助中心',
     'nav.dappForm': 'DApp上架申请',
+    'nav.tokenForm': 'Token信息更新申请',
     'banner.title1': '币通',
     'banner.title2': '连接数字世界的通道',
     'banner.text1': '安全可靠的EOS钱包，在提供便利的同时为您的资产保驾护航',
