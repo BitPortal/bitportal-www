@@ -32,7 +32,7 @@ class ArticleItem extends React.Component {
                 </div>
                 <div className="col-sm-10 col-sm-offset-2 article-info">
                     <div className="article-author">
-                        {this.props.articleData.node.author.name} · {moment(this.props.articleData.node.createdAt).locale('zh-cn').fromNow()}
+                        {this.props.articleData.node.author} · {moment(this.props.articleData.node.createdAt).locale('zh-cn').fromNow()}
                     </div>
                 </div>
             </div>
