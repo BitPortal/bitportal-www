@@ -38,10 +38,10 @@ class ArticlePage extends React.Component {
         let articleUpdatedAt = updatedAt.toDateString()
         const ArticleUserInfo = (<div className="col-xs-12 col-sm-2 article-user-info">
             <div className="article-avatar">
-                <img src={this.data.strapiArticle.author.avatar_url}/>
+                <img src="https://cdn.bitportal.io/media/2018/05/0b8578be-discovery_logo.png"/>
             </div>
             <div className="article-username">
-                {this.data.strapiArticle.author.name}
+                {this.data.strapiArticle.author}
             </div>
             <div className="article-updated-at">
                 <span className="icon icon-time"> </span> {articleUpdatedAt}
@@ -95,11 +95,7 @@ export const query = graphql`
             title
             content
             customized_url
-            author {
-                id
-                name
-                avatar_url
-            }
+            author
             createdAt
             updatedAt
             tag

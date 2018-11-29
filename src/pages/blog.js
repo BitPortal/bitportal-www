@@ -60,9 +60,7 @@ export const pageQuery = graphql`
         node {
           id
           title
-          author{
-            name
-          }
+          author
           updatedAt
           createdAt
           content
