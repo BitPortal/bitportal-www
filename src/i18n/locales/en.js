@@ -8,7 +8,7 @@ export default {
     'nav.helpCenter': 'Help Center',
     'nav.dappForm': 'DApp List Application',
     'nav.tokenForm': 'Token Info Update Application',
-    'banner.title1': 'The World’s Trusted Portal',
+    'banner.title1': 'Your Trusted Portal',
     'banner.title2': 'To The Internet Of Value.',
     'banner.text1': 'A Wallet, Portfolio Manager and Exchange for the EOS Community',
     'banner.text2': 'Secure EOS Wallet, a better solution for your convenient usage of crypto wallet',

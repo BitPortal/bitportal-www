@@ -75,7 +75,7 @@ class Layout extends React.Component {
                     <meta name="twitter:summary" content="Page summary'"/>
                     <meta name="twitter:description"
                           content="BitPortal is a well-designed multiple wallet. It supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Trusted Portal to the Internet of Value!"/>
-                    <meta property="og:title" content="BitPortal - The Portal of the Internet of Value"/>
+                    <meta property="og:title" content="BitPortal - Your Trusted Portal of the Internet of Value"/>
                     <meta property="og:description"
                           content="BitPortal is a well-designed EOS wallet. It supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Trusted Portal to the Internet of Value!"/>
                     <meta property="og:image" content="/static/open-graph/open-graph.jpg"/>
