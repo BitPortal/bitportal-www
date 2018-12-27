@@ -22,11 +22,20 @@ npm install --global gatsby-cli
 ## Develop
 
 ```sh
-gatsby develop
+yarn run develop
 ```
 
 ## Build
 
 ```sh
-gatsby build
+yarn run build
+```
+
+## Deploy with firebase
+
+install firebase before deploy
+
+```sh
+firebase use <project-id>
+firebase deploy
 ```

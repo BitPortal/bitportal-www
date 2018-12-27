@@ -66,15 +66,16 @@ class Layout extends React.Component {
                     <meta name="baidu-site-verification" content="BYgg29bFbl"/>
                     <meta name="google-site-verification" content="Wv3KiSQpcA3P3ti2Wi87x4wyDyWD2gfFrPsZEEZizXw"/>
                     <meta name="description"
-                          content="BitPortal is a well-designed EOS wallet. It supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Portal to the Internet of Value!"/>
+                          content="BitPortal is a well-designed EOS wallet. It supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Trusted Portal to the Internet of Value!"/>
+                    <meta name="keyword" content="BitPortal, 币通, 币通钱包, EOS Wallet, Crypto Wallet, DEX, 多链钱包">
                     <meta name="twitter:site" content="@BitPortal_IO"/>
                     <meta name="twitter:creator" content="@BitPortal_IO"/>
                     <meta name="twitter:title" content="BitPortal - Your Trusted Portal to the Internet of Value"/>
                     <meta name="twitter:image" content="/static/open-graph/twitter-card.jpg"/>
                     <meta name="twitter:card" content="summary_large_image"/>
-                    <meta name="twitter:summary" content="Page summary'"/>
+                    <meta name="twitter:summary" content="BitPortal Wallet"/>
                     <meta name="twitter:description"
-                          content="BitPortal is a well-designed multiple wallet. It supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Trusted Portal to the Internet of Value!"/>
+                          content="BitPortal is a well-designed multi crypto wallet. BitPortal now supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Trusted Portal to the Internet of Value!"/>
                     <meta property="og:title" content="BitPortal - Your Trusted Portal of the Internet of Value"/>
                     <meta property="og:description"
                           content="BitPortal is a well-designed EOS wallet. It supports EOS voting event, EOS based asset management and markets data display. Welcome to BitPortal. Your Trusted Portal to the Internet of Value!"/>
@@ -82,7 +83,7 @@ class Layout extends React.Component {
                     <meta property="og:locale'" content="en_US"/>
                     <meta property="og:type" content="website"/>
                     <meta property="og:url" content="https://www.bitportal.io/"/>
-                    <meta property="og:site_name" content="BitPortal'"/>
+                    <meta property="og:site_name" content="BitPortal"/>
                 </Helmet>
                 {this.state.webview || <Header language={this.state.language} setLanguage={this.setLanguage}/>}
                 <div>
