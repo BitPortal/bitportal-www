@@ -25,6 +25,15 @@ class Footer extends React.Component {
         })();
     }
     render() {
+        let dappForm = ''
+        let tokenForm = ''
+        if (this.props.language == 'zh') {
+            dappForm = <li><a href="http://bitportal.mikecrm.com/3X3biAv"><FormattedMessage id="nav.dappForm"/></a></li>
+            tokenForm = <li><a href="http://bitportal.mikecrm.com/OCSv3Pm"><FormattedMessage id="nav.tokenForm"/></a></li>
+        } else {
+            dappForm = <li><a href="http://s.bitportal.io/4DUnz"><FormattedMessage id="nav.dappForm"/></a></li>
+            tokenForm = <li><a href="http://s.bitportal.io/6cHwC"><FormattedMessage id="nav.tokenForm"/></a></li>
+        }
         return (
             <div>
                 <footer>
@@ -41,8 +50,8 @@ class Footer extends React.Component {
                             <div className="col-md-2 col-xs-6">
                                 <ul className="footer-link-wrap">
                                     <li><a href="/blog"><FormattedMessage id="nav.blog"/></a></li>
-                                    <li><a href="http://bitportal.mikecrm.com/3X3biAv"><FormattedMessage id="nav.dappForm"/></a></li>
-                                    <li><a href="http://bitportal.mikecrm.com/OCSv3Pm"><FormattedMessage id="nav.tokenForm"/></a></li>
+                                    {dappForm}
+                                    {tokenForm}
                                 </ul>
                             </div>
                             <div className="footer-location">

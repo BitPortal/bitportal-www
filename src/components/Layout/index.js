@@ -89,7 +89,7 @@ class Layout extends React.Component {
                 <div>
                     {this.props.children}
                 </div>
-                {this.state.webview || <Footer/>}
+                {this.state.webview || <Footer language={this.state.language} />}
                 <MobileBlocks/>
             </div>
         )
