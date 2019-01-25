@@ -40,7 +40,7 @@ class QuestionPage extends React.Component {
         return (
             <Layout>
                 <div className="question-page">
-                    <PageBanner pageTitle={'nav.helpCenter'}/>
+                    {/* <PageBanner pageTitle={'nav.helpCenter'}/> */}
                     <div className="container">
                         {this.state.webview || BreadCrumb}
                         <div className="question-page-wrap">

@@ -15,6 +15,7 @@ export default {
     'banner.text3': 'Decentralized Exchange based on Dexlize Protocol which will offer the best liquidity',
     'banner.downloadIos': 'Download iOS',
     'banner.downloadAndroid': 'Download Android',
+    'banner.downloadIOSEnterprise': 'Download iOS Enterprise',
     'viewMore': 'View More',
     'showMore': 'Show More',
     'address': 'Singapore',

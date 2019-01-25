@@ -55,7 +55,7 @@ export default withIntl(BlogPage)
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allStrapiArticle (sort: { fields: [createdAt], order: DESC}){
+    allStrapiArticle (sort: { fields: [display_priority, createdAt], order: DESC}){
       edges {
         node {
           id
@@ -75,11 +75,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allStrapiBanner {
+    allStrapiBanner (limit: 2) {
       edges {
         node {
           id
           title
+          sub_title
+          language
+          status
           img_url
           jump_url
           display_priority

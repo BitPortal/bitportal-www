@@ -49,6 +49,7 @@ class HelpPage extends React.Component {
             })
             questionData.push(item)
         })
+
         return  {
             filteredTypeData,
             questionData
@@ -85,7 +86,7 @@ class HelpPage extends React.Component {
         return (
             <Layout>
                 <div className="help-page">
-                    <PageBanner pageTitle={'nav.helpCenter'}/>
+                    {/* <PageBanner pageTitle={'nav.helpCenter'}/> */}
                     <div className="container">
                         <div className="help-content-wrap">
                             <ul className="help-page-filter">

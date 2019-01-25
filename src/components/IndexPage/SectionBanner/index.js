@@ -33,7 +33,7 @@ class SectionBanner extends React.Component {
                             </li>
                         </ul>
                         <div className='page-banner-download-wrap'>
-                            <a href="https://fir.im/bitportal" className="banner-download">
+                            <a href="https://itunes.apple.com/hk/app/dexlize-bitportal/id1438712581?mt=8" className="banner-download">
                                 <span className="icon icon-ios"/>
                                 <FormattedMessage id="banner.downloadIos"/>
                             </a>
@@ -41,6 +41,10 @@ class SectionBanner extends React.Component {
                                 <span className="icon icon-android"/>
                                 <FormattedMessage id="banner.downloadAndroid"/>
                             </a>
+                            <a href="https://fir.im/bitportal" className="download-link"  >
+                                <FormattedMessage  id="banner.downloadIOSEnterprise" />
+                            </a>
+                          
                         </div>
                     </Fade>
                 </div>
