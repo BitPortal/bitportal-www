@@ -1,6 +1,7 @@
 export default {
     'name': 'BitPortal',
-    'title.index': 'BitPortal - The Portal to the Internet of Value',
+    'title.index': 'BitPortal - Your Trusted Portal to the Internet of Value',
+    'description': 'BitPortal is a well-designed crypto currency wallet. It supports mutiple currency and compatible with various protocols (like metamask and scatter). It is your trusted portal to the Internet of Value.',
     'nav.home': 'Home',
     'nav.blog': 'Blog',
     'nav.tos': 'Terms of Service',
@@ -22,7 +23,7 @@ export default {
     'comments': 'COMMENTS',
     'comment.postHint': 'LEAVE A COMMENT',
     'features.title': 'Features',
-    'features.text': 'BitPortal is your portal to the Internet of Value.',
+    'features.text': 'BitPortal is your trusted portal to the Internet of Value.',
     'features.item1Title': 'Secure',
     'features.item1Text': 'Take back control. Own your private keys and don\'t suffer the crisis of escrow',
     'features.item2Title': 'Reliable',

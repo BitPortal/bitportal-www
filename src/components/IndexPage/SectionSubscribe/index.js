@@ -65,13 +65,13 @@ class SectionSubscribe extends React.Component {
                                     </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <a href="https://www.dexlize.org/" target="_blank">
-                                        <img src='/static/partners/Dexlize.png'/>
+                                    <a href="https://kyubey.network/" target="_blank">
+                                        <img src='/static/partners/kyubey.png'/>
                                     </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
-                                    <a href="http://eoseco.net/#" target="_blank">
-                                        <img src='/static/partners/EOSCO.png'/>
+                                    <a href="https://www.dexlize.org/" target="_blank">
+                                        <img src='/static/partners/Dexlize.png'/>
                                     </a>
                                 </div>
                                 <div className='col-md-2 col-xs-6 partner-item'>
@@ -82,11 +82,6 @@ class SectionSubscribe extends React.Component {
                                 <div className='col-md-2 col-xs-6 partner-item'>
                                     <a href="https://imeos.one/" target="_blank">
                                         <img src='/static/partners/imeos.png'/>
-                                    </a>
-                                </div>
-                                <div className='col-md-2 col-xs-6 partner-item'>
-                                    <a href="https://kyubey.network/" target="_blank">
-                                        <img src='/static/partners/kyubey.png'/>
                                     </a>
                                 </div>
                             </div>
