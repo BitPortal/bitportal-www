@@ -41,8 +41,8 @@ class SectionBanner extends React.Component {
                                 <span className="icon icon-android"/>
                                 <FormattedMessage id="banner.downloadAndroid"/>
                             </a>
-                            <a href="https://fir.im/bitportal" className="download-link"  >
-                                <FormattedMessage  id="banner.downloadIOSEnterprise" />
+                            <a href="https://testflight.apple.com/join/9Y4NtBEQ" className="download-link"  >
+                                <FormattedMessage  id="banner.joinTestFlights" />
                             </a>
                           
                         </div>
