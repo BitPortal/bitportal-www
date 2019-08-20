@@ -15,7 +15,13 @@ exports.onClientEntry = () => {
         }else {
             language = (navigator.language || navigator.browserLanguage).slice(0, 2) || 'en'
         }
+
+        if(language !== 'en' || language !== 'zh'){
+            language = 'en'
+        }
+
         localStorage.setItem('language', language)
+
         const urlLanguage = location.href.indexOf('/zh') > -1 ? 'zh' : 'en'
         if(urlLanguage !== language){
             location.href = `${language === 'en' ? '/' : '/zh' + originalPath}`
