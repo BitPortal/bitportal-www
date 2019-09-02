@@ -16,7 +16,7 @@ exports.onClientEntry = () => {
             language = (navigator.language || navigator.browserLanguage).slice(0, 2) || 'en'
         }
 
-        if(language !== 'en' || language !== 'zh'){
+        if(language !== 'en' && language !== 'zh'){
             language = 'en'
         }
 
