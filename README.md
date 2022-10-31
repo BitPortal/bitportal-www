@@ -1,6 +1,6 @@
 # BitPortal Website
 
-front end is based on gatsby
+BitPortal's official website web page. The content is from a headless CMS and the pages are auto generated.
 
 ## Backend
 
